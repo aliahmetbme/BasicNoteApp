@@ -16,14 +16,22 @@ extension UITextField {
         self.layer.cornerRadius = 5
         self.layer.borderWidth = 1
         
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: self.frame.height))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
         self.leftView = paddingView
         self.leftViewMode = .always
         self.layer.borderColor = UIColor(named: "borderColor")?.cgColor
         
     }
     
-    func showInvalidFunctionError() {
+    func isValidEmail (mail:String) -> Bool {
+        if (mail.contains("@") && mail.contains(".")) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func showInvalidFunctionError(message:String) {
         
         self.layer.borderColor = UIColor.red.cgColor
         self.layer.borderWidth = 1
@@ -41,7 +49,7 @@ extension UITextField {
         
         // Yeni bir UILabel oluşturma
         let errorText = UILabel()
-        errorText.text = "Password Invalid"
+        errorText.text = message
         errorText.textColor = UIColor.red
         errorText.font = UIFont.systemFont(ofSize: 12)
         errorText.translatesAutoresizingMaskIntoConstraints = false
@@ -80,7 +88,7 @@ extension UITextField {
 
 extension UIButton {
     func makeRadius () {
-        self.layer.cornerRadius = 20
+        self.layer.cornerRadius = 5
         self.clipsToBounds = true
     }
     
