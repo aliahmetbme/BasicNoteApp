@@ -26,11 +26,19 @@ class RegisterViewController: UIViewController {
         registerButton.disabledDesign()
         loginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
         
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationItem.backBarButtonItem = backButton
+        
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     @IBAction func register(_ sender: Any) {
         // kayıt işlemleri hata durumu vb. 
-        passwordLabel.showInvalidFunctionError()
+        passwordLabel.showInvalidFunctionError(message: "Password Invalid")
     }
     
     @IBAction func goLoginPage(_ sender: Any) {
