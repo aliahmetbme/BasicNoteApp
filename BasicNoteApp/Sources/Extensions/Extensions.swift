@@ -10,8 +10,7 @@ import UIKit
 
 extension UITextField {
     
-    
-    
+    // default değerler
     func initialDesign() {
         self.layer.cornerRadius = 5
         self.layer.borderWidth = 1
@@ -22,8 +21,8 @@ extension UITextField {
         self.layer.borderColor = UIColor(named: "borderColor")?.cgColor
         
     }
-    
-    func isValidEmail (mail:String) -> Bool {
+    // Regex kullan
+    func isValidEmail (mail: String) -> Bool {
         if (mail.contains("@") && mail.contains(".")) {
             return true
         } else {
@@ -31,7 +30,7 @@ extension UITextField {
         }
     }
     
-    func showInvalidFunctionError(message:String) {
+    func showInvalidFunctionError(message: String) {
         
         self.layer.borderColor = UIColor.red.cgColor
         self.layer.borderWidth = 1
@@ -87,8 +86,8 @@ extension UITextField {
 }
 
 extension UIButton {
-    func makeRadius () {
-        self.layer.cornerRadius = 5
+    func makeRadius (cornerRadius: CGFloat = 5) {
+        self.layer.cornerRadius = cornerRadius
         self.clipsToBounds = true
     }
     

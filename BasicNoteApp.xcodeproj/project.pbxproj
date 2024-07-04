@@ -63,20 +63,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FE2BEF832C345B9A00DAF37A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		FE2BEF852C345BB100DAF37A /* WebService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WebService;
-			sourceTree = "<group>";
-		};
 		FE2BEF882C3465FB00DAF37A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,13 +70,6 @@
 				FE2BEF8B2C34661900DAF37A /* Register.swift */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		FE2BEF8F2C34676A00DAF37A /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		FE760B1C2C3697660055E53F /* Sources */ = {
@@ -185,11 +164,8 @@
 		FEE75E082C32AC0400F39397 /* BasicNoteApp */ = {
 			isa = PBXGroup;
 			children = (
-				FE760B1C2C3697660055E53F /* Sources */,
-				FE2BEF8F2C34676A00DAF37A /* Utils */,
-				FE2BEF852C345BB100DAF37A /* WebService */,
-				FE2BEF832C345B9A00DAF37A /* ViewModel */,
 				FEE75E0F2C32AC0400F39397 /* Main.storyboard */,
+				FE760B1C2C3697660055E53F /* Sources */,
 			);
 			path = BasicNoteApp;
 			sourceTree = "<group>";
