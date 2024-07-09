@@ -23,7 +23,7 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBAction func resetPassword(_ sender: Any) {
         // reset password
-        if !emailAdressLabel.isValidEmail(mail: emailAdressLabel.text ?? "") {
+        if !emailAdressLabel.isValidEmail(email: emailAdressLabel.text ?? "") {
             emailAdressLabel.showInvalidFunctionError(message: "Your email address should contain @.")
         }
     }
