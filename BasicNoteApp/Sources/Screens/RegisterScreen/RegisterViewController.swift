@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class RegisterViewController: UIViewController {
 
@@ -46,7 +47,22 @@ class RegisterViewController: UIViewController {
 extension RegisterViewController {
     
     @IBAction private func register(_ sender: Any) {
-        passwordLabel.showInvalidFunctionError(message: "Password Invalid")
+        let parameters = ["full_name":fullNameLabel.text!,"email":emailAdressLabel.text!,"password":passwordLabel.text! ]
+        
+        AF.request("\(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.register)", method: .post, parameters: parameters, encoder: JSONParameterEncoder.default).response {response in
+            
+            if let data = response.data {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
+                        print(json)
+                    }
+                } catch {
+                    print("error")
+                    print(error.localizedDescription)
+                }
+            }
+            
+        }
     }
     
     @IBAction private func goLoginPage(_ sender: Any) {
