@@ -47,38 +47,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE2BEF802C345B6300DAF37A /* Model */ = {
+		FE2BEF802C345B6300DAF37A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FE760B232C36C5C20055E53F /* Notes */,
 				FE2BEF882C3465FB00DAF37A /* Auth */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FE2BEF822C345B8300DAF37A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FEE75E0D2C32AC0400F39397 /* RegisterViewController.swift */,
-				FEE75E092C32AC0400F39397 /* AppDelegate.swift */,
-				FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */,
-				FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */,
-				FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FE2BEF832C345B9A00DAF37A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		FE2BEF852C345BB100DAF37A /* WebService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WebService;
 			sourceTree = "<group>";
 		};
 		FE2BEF882C3465FB00DAF37A /* Auth */ = {
@@ -90,12 +72,76 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		FE2BEF8F2C34676A00DAF37A /* Utils */ = {
+		FE760B1C2C3697660055E53F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */,
+				FEE75E092C32AC0400F39397 /* AppDelegate.swift */,
+				FE760B222C3699DC0055E53F /* Extensions */,
+				FE760B1E2C3697880055E53F /* Screens */,
+				FE2BEF822C345B8300DAF37A /* View */,
+				FE2BEF802C345B6300DAF37A /* Models */,
+				FE760B1D2C3697770055E53F /* Resources */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FE760B1D2C3697770055E53F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEE75E142C32AC0500F39397 /* LaunchScreen.storyboard */,
+				FEE75E122C32AC0500F39397 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE760B1E2C3697880055E53F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FE760B212C3698AC0055E53F /* ForgotPasswordScreen */,
+				FE760B202C3698950055E53F /* LoginScreen */,
+				FE760B1F2C3698880055E53F /* RegisterScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FE760B1F2C3698880055E53F /* RegisterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FEE75E0D2C32AC0400F39397 /* RegisterViewController.swift */,
+			);
+			path = RegisterScreen;
+			sourceTree = "<group>";
+		};
+		FE760B202C3698950055E53F /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		FE760B212C3698AC0055E53F /* ForgotPasswordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */,
+			);
+			path = ForgotPasswordScreen;
+			sourceTree = "<group>";
+		};
+		FE760B222C3699DC0055E53F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				FE2BEF902C34677C00DAF37A /* Extensions.swift */,
 			);
-			path = Utils;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE760B232C36C5C20055E53F /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 		FEE75DFD2C32AC0400F39397 = {
@@ -117,15 +163,9 @@
 		FEE75E082C32AC0400F39397 /* BasicNoteApp */ = {
 			isa = PBXGroup;
 			children = (
-				FE2BEF8F2C34676A00DAF37A /* Utils */,
-				FE2BEF852C345BB100DAF37A /* WebService */,
-				FE2BEF832C345B9A00DAF37A /* ViewModel */,
-				FE2BEF822C345B8300DAF37A /* View */,
-				FE2BEF802C345B6300DAF37A /* Model */,
 				FEE75E0F2C32AC0400F39397 /* Main.storyboard */,
-				FEE75E122C32AC0500F39397 /* Assets.xcassets */,
-				FEE75E142C32AC0500F39397 /* LaunchScreen.storyboard */,
 				FEE75E172C32AC0500F39397 /* Info.plist */,
+				FE760B1C2C3697660055E53F /* Sources */,
 			);
 			path = BasicNoteApp;
 			sourceTree = "<group>";
