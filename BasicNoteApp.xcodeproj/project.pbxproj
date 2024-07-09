@@ -89,7 +89,6 @@
 		FE760B1D2C3697770055E53F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FEE75E172C32AC0500F39397 /* Info.plist */,
 				FEE75E142C32AC0500F39397 /* LaunchScreen.storyboard */,
 				FEE75E122C32AC0500F39397 /* Assets.xcassets */,
 			);
@@ -165,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				FEE75E0F2C32AC0400F39397 /* Main.storyboard */,
+				FEE75E172C32AC0500F39397 /* Info.plist */,
 				FE760B1C2C3697660055E53F /* Sources */,
 			);
 			path = BasicNoteApp;
