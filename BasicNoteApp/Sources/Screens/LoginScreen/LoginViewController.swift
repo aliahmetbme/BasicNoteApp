@@ -11,8 +11,8 @@ class LoginViewController: UIViewController {
 
     @IBOutlet var emailAdressLabel: UITextField!
     @IBOutlet var passwordLabel: UITextField!
-    
     @IBOutlet var goRegisterPageButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,18 +20,22 @@ class LoginViewController: UIViewController {
         emailAdressLabel.initialDesign()
         passwordLabel.initialDesign()
         
-
+        setBackButtonItemTitle()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
-        navigationItem.backButtonTitle = ""
     }
+}
 
-    @IBAction func goRegisterPage(_ sender: Any) {
+// Actions
+extension LoginViewController {
+    
+    @IBAction private func goRegisterPage(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func forgotPassword(_ sender: Any) {
+    @IBAction private func forgotPassword(_ sender: Any) {
         performSegue(withIdentifier: "goForgorVC", sender: nil)
     }
 }

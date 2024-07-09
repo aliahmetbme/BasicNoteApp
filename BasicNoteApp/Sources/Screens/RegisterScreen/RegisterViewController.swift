@@ -22,24 +22,16 @@ class RegisterViewController: UIViewController {
         fullNameLabel.initialDesign()
         emailAdressLabel.initialDesign()
         passwordLabel.initialDesign()
-        
         registerButton.disabledDesign()
+
         loginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
     
-        x()
+        setBackButtonItemTitle()
     }
     
-    private func x () {
-        let backButton = UIBarButtonItem()
-        backButton.title = ""
-        self.navigationItem.backBarButtonItem = backButton
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }
-    
-
 }
 
 // Actions
