@@ -11,13 +11,17 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet private var fullNameLabel: UITextField!
     @IBOutlet private var emailAdressLabel: UITextField!
-    @IBOutlet var passwordLabel: UITextField!
-    @IBOutlet var registerButton: UIButton!
-    @IBOutlet var loginButton: UIButton!
+    @IBOutlet private var passwordLabel: UITextField!
+    @IBOutlet private var registerButton: UIButton!
+    @IBOutlet private var loginButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initalDesign()
+    }
+    
+    private func initalDesign () {
         
         fullNameLabel.initialDesign()
         emailAdressLabel.initialDesign()
