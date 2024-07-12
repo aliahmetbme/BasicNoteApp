@@ -12,13 +12,18 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet private var fullNameLabel: UITextField!
     @IBOutlet private var emailAdressLabel: UITextField!
-    @IBOutlet var passwordLabel: UITextField!
-    @IBOutlet var registerButton: UIButton!
-    @IBOutlet var loginButton: UIButton!
+    @IBOutlet private var passwordLabel: UITextField!
+    @IBOutlet private var registerButton: UIButton!
+    @IBOutlet private var loginButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initalDesign()
+        x()
+    }
+    
+    private func initalDesign () {
         
         fullNameLabel.initialDesign()
         emailAdressLabel.initialDesign()
@@ -26,8 +31,6 @@ class RegisterViewController: UIViewController {
         
         registerButton.disabledDesign()
         loginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
-    
-        x()
     }
     
     private func x () {
@@ -39,15 +42,13 @@ class RegisterViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }
-    
-
 }
 
 // Actions
 extension RegisterViewController {
     
     @IBAction private func register(_ sender: Any) {
-        let parameters = ["full_name":fullNameLabel.text!,"email":emailAdressLabel.text!,"password":passwordLabel.text! ]
+        let parameters = UserRegister(password: passwordLabel.text! , email: emailAdressLabel.text! , full_name: fullNameLabel.text!)
         
         AF.request("\(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.register)", method: .post, parameters: parameters, encoder: JSONParameterEncoder.default).response {response in
             
@@ -61,7 +62,6 @@ extension RegisterViewController {
                     print(error.localizedDescription)
                 }
             }
-            
         }
     }
     

@@ -13,6 +13,7 @@
 		FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */; };
 		FEA190CD2C3DE3E80088D7D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA190CC2C3DE3E80088D7D2 /* User.swift */; };
 		FEA190D12C3DE6550088D7D2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA190D02C3DE6550088D7D2 /* Config.swift */; };
+		FEA190D32C3DF8B30088D7D2 /* ConfigExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA190D22C3DF8B30088D7D2 /* ConfigExample.swift */; };
 		FEE75E0A2C32AC0400F39397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E092C32AC0400F39397 /* AppDelegate.swift */; };
 		FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */; };
 		FEE75E0E2C32AC0400F39397 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E0D2C32AC0400F39397 /* RegisterViewController.swift */; };
@@ -30,6 +31,7 @@
 		FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FEA190CC2C3DE3E80088D7D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FEA190D02C3DE6550088D7D2 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		FEA190D22C3DF8B30088D7D2 /* ConfigExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigExample.swift; sourceTree = "<group>"; };
 		FEE75E062C32AC0400F39397 /* BasicNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE75E092C32AC0400F39397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				FEE75E172C32AC0500F39397 /* Info.plist */,
 				FE760B1C2C3697660055E53F /* Sources */,
 				FEA190D02C3DE6550088D7D2 /* Config.swift */,
+				FEA190D22C3DF8B30088D7D2 /* ConfigExample.swift */,
 			);
 			path = BasicNoteApp;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */,
 				FEE75E0E2C32AC0400F39397 /* RegisterViewController.swift in Sources */,
 				FEE75E0A2C32AC0400F39397 /* AppDelegate.swift in Sources */,
+				FEA190D32C3DF8B30088D7D2 /* ConfigExample.swift in Sources */,
 				FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */,
 				FEA190D12C3DE6550088D7D2 /* Config.swift in Sources */,
 				FE2BEF912C34677C00DAF37A /* Extensions.swift in Sources */,

@@ -9,8 +9,9 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
-    @IBOutlet var emailAdressLabel: UITextField!
-    @IBOutlet var resetPasswordButton: UIButton!
+    @IBOutlet private var emailAdressLabel: UITextField!
+    @IBOutlet private var resetPasswordButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resetPasswordButton.makeRadius()
@@ -20,13 +21,15 @@ class ForgotPasswordViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
     }
+}
+
+// Actions
+extension ForgotPasswordViewController {
     
-    @IBAction func resetPassword(_ sender: Any) {
+    @IBAction private func resetPassword(_ sender: Any) {
         // reset password
         if !emailAdressLabel.isValidEmail(mail: emailAdressLabel.text ?? "") {
             emailAdressLabel.showInvalidFunctionError(message: "Your email address should contain @.")
         }
     }
-    
-
 }
