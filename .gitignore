@@ -86,7 +86,7 @@ iOSInjectionProject/
 xcuserdata
 *.xcodeproj
 *.xcuserstate
-
+xcshareddata
 ### Xcode ###
 
 ## Xcode 8 and earlier
@@ -101,7 +101,3 @@ xcuserdata
 
 GoogleService-Info.plist
 firebase-debug.log
-
-# Configuration Files
-
-Config.swift
