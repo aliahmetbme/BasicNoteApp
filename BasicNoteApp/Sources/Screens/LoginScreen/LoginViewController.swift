@@ -9,9 +9,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet var emailAdressLabel: UITextField!
-    @IBOutlet var passwordLabel: UITextField!
-    @IBOutlet var goRegisterPageButton: UIButton!
+    @IBOutlet private var emailAdressLabel: UITextField!
+    @IBOutlet private var passwordLabel: UITextField!
+    @IBOutlet private var goRegisterPageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,12 @@ class LoginViewController: UIViewController {
 // Actions
 extension LoginViewController {
     
-    @IBAction private func goRegisterPage(_ sender: Any) {
+
+}
+
+// Actions
+extension LoginViewController {
+    @IBAction private private func goRegisterPage(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     

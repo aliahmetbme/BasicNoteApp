@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class RegisterViewController: UIViewController {
 
     @IBOutlet private var fullNameLabel: UITextField!
     @IBOutlet private var emailAdressLabel: UITextField!
-    @IBOutlet private var passwordLabel: UITextField!
-    @IBOutlet private var registerButton: UIButton!
-    @IBOutlet private var loginButton: UIButton!
+    @IBOutlet private private var passwordLabel: UITextField!
+    @IBOutlet private private var registerButton: UIButton!
+    @IBOutlet private private var loginButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -42,8 +43,21 @@ class RegisterViewController: UIViewController {
 extension RegisterViewController {
     
     @IBAction private func register(_ sender: Any) {
-        passwordLabel.showInvalidFunctionError(message: "Password Invalid")
-        print(emailAdressLabel.isValidEmail(email: emailAdressLabel.text!))
+        let parameters = UserRegister(password: passwordLabel.text! , email: emailAdressLabel.text! , full_name: fullNameLabel.text!)
+        
+        AF.request("\(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.register)", method: .post, parameters: parameters, encoder: JSONParameterEncoder.default).response {response in
+            
+            if let data = response.data {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
+                        print(json)
+                    }
+                } catch {
+                    print("error")
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
     @IBAction private func goLoginPage(_ sender: Any) {
