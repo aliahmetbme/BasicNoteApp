@@ -12,9 +12,9 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet private var fullNameLabel: UITextField!
     @IBOutlet private var emailAdressLabel: UITextField!
-    @IBOutlet private private var passwordLabel: UITextField!
-    @IBOutlet private private var registerButton: UIButton!
-    @IBOutlet private private var loginButton: UIButton!
+    @IBOutlet private var passwordLabel: UITextField!
+    @IBOutlet private var registerButton: UIButton!
+    @IBOutlet private var loginButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class RegisterViewController: UIViewController {
 
         loginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
     
-        setBackButtonItemTitle()
+        setBackButtonItemTitle(title: "")
     }
     
     override func viewWillAppear(_ animated: Bool) {

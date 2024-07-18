@@ -84,6 +84,7 @@ iOSInjectionProject/
 
 ### SwiftPackageManager ###
 xcuserdata
+*.xcodeproj
 *.xcuserstate
 BasicNoteApp.xcworkspace/xcuserdata/aliahmeterdogdu.xcuserdatad
 ### Xcode ###
@@ -101,3 +102,4 @@ BasicNoteApp.xcworkspace/xcuserdata/aliahmeterdogdu.xcuserdatad
 GoogleService-Info.plist
 firebase-debug.log
 *.xcuserstate
+*.pbxproj

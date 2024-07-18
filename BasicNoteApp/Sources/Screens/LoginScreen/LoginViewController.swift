@@ -19,8 +19,6 @@ class LoginViewController: UIViewController {
         goRegisterPageButton.setAttributedTitle(part1: "New User? ", color1: UIColor.black, part2: "Sign up now", color2: UIColor.signuptext, for: .normal)
         emailAdressLabel.initialDesign()
         passwordLabel.initialDesign()
-        
-        setBackButtonItemTitle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +34,7 @@ extension LoginViewController {
 
 // Actions
 extension LoginViewController {
-    @IBAction private private func goRegisterPage(_ sender: Any) {
+    @IBAction private func goRegisterPage(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
