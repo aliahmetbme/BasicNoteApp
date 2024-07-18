@@ -16,6 +16,7 @@ struct UserRegister: Codable {
 struct UserLogin: Codable {
     let password: String
     let email: String
+    let token: String
 }
 
 struct UserPasswordForgot: Codable {
