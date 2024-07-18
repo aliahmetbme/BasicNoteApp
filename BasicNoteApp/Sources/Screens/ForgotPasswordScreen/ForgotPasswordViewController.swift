@@ -9,8 +9,9 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
-    @IBOutlet var emailAdressLabel: UITextField!
-    @IBOutlet var resetPasswordButton: UIButton!
+    @IBOutlet private var emailAdressLabel: UITextField!
+    @IBOutlet private var resetPasswordButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

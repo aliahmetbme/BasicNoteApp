@@ -84,9 +84,7 @@ iOSInjectionProject/
 
 ### SwiftPackageManager ###
 xcuserdata
-*.xcodeproj
 *.xcuserstate
-xcshareddata
 ### Xcode ###
 
 ## Xcode 8 and earlier
