@@ -24,7 +24,11 @@ extension UITextField {
     }
     // Regex kullan
     func isValidEmail (email: String) -> Bool {
+<<<<<<< HEAD:BasicNoteApp/Sources/Extensions/Extensions.swift
+        
+=======
 
+>>>>>>> develop:BasicNoteApp/Sources/Extensions/Extensions+UITextField.swift
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailPredicate.evaluate(with: email)

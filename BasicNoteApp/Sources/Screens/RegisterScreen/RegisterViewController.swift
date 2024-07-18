@@ -43,9 +43,12 @@ extension RegisterViewController {
     
     @IBAction private func register(_ sender: Any) {
         passwordLabel.showInvalidFunctionError(message: "Password Invalid")
+        print(emailAdressLabel.isValidEmail(email: emailAdressLabel.text!))
     }
     
     @IBAction private func goLoginPage(_ sender: Any) {
         performSegue(withIdentifier: "goLoginPage", sender: nil)
+        print(emailAdressLabel.isValidEmail(email: emailAdressLabel.text!))
+
     }
 }
