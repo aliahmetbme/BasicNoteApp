@@ -1,21 +1,22 @@
 //
-//  Extensions.swift
+//  Extensions@+UITextField.swift
 //  BasicNoteApp
 //
-//  Created by Ali ahmet Erdoğdu on 2.07.2024.
+//  Created by Ali ahmet Erdoğdu on 9.07.2024.
 //
 
 import Foundation
 import UIKit
 
+
 extension UITextField {
     
     // default değerler
-    func initialDesign() {
-        self.layer.cornerRadius = 5
-        self.layer.borderWidth = 1
+    func initialDesign(radius:CGFloat = 5, borderWidth:CGFloat = 1, width:CGFloat = 10) {
+        self.layer.cornerRadius = radius
+        self.layer.borderWidth = borderWidth
         
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: self.frame.height))
         self.leftView = paddingView
         self.leftViewMode = .always
         self.layer.borderColor = UIColor(named: "borderColor")?.cgColor
@@ -23,7 +24,11 @@ extension UITextField {
     }
     // Regex kullan
     func isValidEmail (email: String) -> Bool {
+<<<<<<< HEAD:BasicNoteApp/Sources/Extensions/Extensions.swift
         
+=======
+
+>>>>>>> develop:BasicNoteApp/Sources/Extensions/Extensions+UITextField.swift
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailPredicate.evaluate(with: email)
@@ -81,36 +86,5 @@ extension UITextField {
                 errorText.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
             ])
         }
-    }
-}
-
-extension UIButton {
-    func makeRadius (cornerRadius: CGFloat = 5) {
-        self.layer.cornerRadius = cornerRadius
-        self.clipsToBounds = true
-    }
-    
-    func disabledDesign() {
-        if (!self.isEnabled) {
-            self.backgroundColor = UIColor(named: "buttonLoginDisabled")
-            self.setTitleColor(UIColor.textPrimary, for: .normal)
-        }
-    }
-    
-    func setAttributedTitle(part1: String, color1: UIColor, part2: String, color2: UIColor, for state: UIControl.State) {
-        let attributes1: [NSAttributedString.Key: Any] = [
-            .foregroundColor: color1
-        ]
-        
-        let attributes2: [NSAttributedString.Key: Any] = [
-            .foregroundColor: color2
-        ]
-        
-        let attributedString = NSMutableAttributedString(string: part1, attributes: attributes1)
-        let part2AttributedString = NSAttributedString(string: part2, attributes: attributes2)
-        
-        attributedString.append(part2AttributedString)
-        
-        self.setAttributedTitle(attributedString, for: state)
     }
 }
