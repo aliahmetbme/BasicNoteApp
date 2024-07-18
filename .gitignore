@@ -100,3 +100,4 @@ BasicNoteApp.xcworkspace/xcuserdata/aliahmeterdogdu.xcuserdatad
 
 GoogleService-Info.plist
 firebase-debug.log
+*.xcuserstate
