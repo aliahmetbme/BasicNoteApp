@@ -85,8 +85,12 @@ iOSInjectionProject/
 ### SwiftPackageManager ###
 xcuserdata
 *.xcuserstate
+<<<<<<< HEAD
 BasicNoteApp.xcworkspace/xcuserdata/aliahmeterdogdu.xcuserdatad/
 *.xcodeproj
+=======
+BasicNoteApp.xcworkspace/xcuserdata/aliahmeterdogdu.xcuserdatad
+>>>>>>> develop
 ### Xcode ###
 
 ## Xcode 8 and earlier
