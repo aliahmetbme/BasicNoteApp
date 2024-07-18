@@ -20,19 +20,23 @@ class LoginViewController: UIViewController {
         emailAdressLabel.initialDesign()
         passwordLabel.initialDesign()
         
-
+        setBackButtonItemTitle()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
-        navigationItem.backButtonTitle = ""
     }
+}
 
+// Actions
+extension LoginViewController {
+    
 
 }
 
 // Actions
 extension LoginViewController {
-    @IBAction private func goRegisterPage(_ sender: Any) {
+    @IBAction private private func goRegisterPage(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     

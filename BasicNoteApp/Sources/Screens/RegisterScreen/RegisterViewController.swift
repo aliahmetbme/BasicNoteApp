@@ -12,15 +12,14 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet private var fullNameLabel: UITextField!
     @IBOutlet private var emailAdressLabel: UITextField!
-    @IBOutlet private var passwordLabel: UITextField!
-    @IBOutlet private var registerButton: UIButton!
-    @IBOutlet private var loginButton: UIButton!
+    @IBOutlet private private var passwordLabel: UITextField!
+    @IBOutlet private private var registerButton: UIButton!
+    @IBOutlet private private var loginButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initalDesign()
-        x()
     }
     
     private func initalDesign () {
@@ -28,17 +27,13 @@ class RegisterViewController: UIViewController {
         fullNameLabel.initialDesign()
         emailAdressLabel.initialDesign()
         passwordLabel.initialDesign()
-        
         registerButton.disabledDesign()
+
         loginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
+    
+        setBackButtonItemTitle()
     }
     
-    private func x () {
-        let backButton = UIBarButtonItem()
-        backButton.title = ""
-        self.navigationItem.backBarButtonItem = backButton
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }

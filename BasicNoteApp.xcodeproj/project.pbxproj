@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		B4F54960F8D5067EB704A2FD /* Pods_BasicNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3799336ED2C5BE62AC5AF0DB /* Pods_BasicNoteApp.framework */; };
 		FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */; };
-		FE2BEF912C34677C00DAF37A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2BEF902C34677C00DAF37A /* Extensions.swift */; };
 		FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */; };
+<<<<<<< HEAD
 		FEA190CD2C3DE3E80088D7D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA190CC2C3DE3E80088D7D2 /* User.swift */; };
 		FEA190D12C3DE6550088D7D2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA190D02C3DE6550088D7D2 /* Config.swift */; };
 		FEA190D32C3DF8B30088D7D2 /* ConfigExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA190D22C3DF8B30088D7D2 /* ConfigExample.swift */; };
+=======
+		FE8FF9B02C3DDB8600A19C03 /* Extensions+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8FF9AF2C3DDB8600A19C03 /* Extensions+UITextField.swift */; };
+		FE8FF9B22C3DDBBE00A19C03 /* Extensions+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8FF9B12C3DDBBE00A19C03 /* Extensions+UIButton.swift */; };
+		FE8FF9B42C3DDFDB00A19C03 /* Extensions+UIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8FF9B32C3DDFDB00A19C03 /* Extensions+UIVC.swift */; };
+>>>>>>> develop
 		FEE75E0A2C32AC0400F39397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E092C32AC0400F39397 /* AppDelegate.swift */; };
 		FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */; };
 		FEE75E0E2C32AC0400F39397 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E0D2C32AC0400F39397 /* RegisterViewController.swift */; };
@@ -27,11 +32,16 @@
 		8044875D1927527B4155225D /* Pods-BasicNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicNoteApp.release.xcconfig"; path = "Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp.release.xcconfig"; sourceTree = "<group>"; };
 		F0B478FB940B4BB00B7F1FA2 /* Pods-BasicNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicNoteApp.debug.xcconfig"; path = "Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		FE2BEF902C34677C00DAF37A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		FEA190CC2C3DE3E80088D7D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FEA190D02C3DE6550088D7D2 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FEA190D22C3DF8B30088D7D2 /* ConfigExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigExample.swift; sourceTree = "<group>"; };
+=======
+		FE8FF9AF2C3DDB8600A19C03 /* Extensions+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextField.swift"; sourceTree = "<group>"; };
+		FE8FF9B12C3DDBBE00A19C03 /* Extensions+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIButton.swift"; sourceTree = "<group>"; };
+		FE8FF9B32C3DDFDB00A19C03 /* Extensions+UIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIVC.swift"; sourceTree = "<group>"; };
+>>>>>>> develop
 		FEE75E062C32AC0400F39397 /* BasicNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE75E092C32AC0400F39397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,7 +165,9 @@
 		FE760B222C3699DC0055E53F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FE2BEF902C34677C00DAF37A /* Extensions.swift */,
+				FE8FF9AF2C3DDB8600A19C03 /* Extensions+UITextField.swift */,
+				FE8FF9B12C3DDBBE00A19C03 /* Extensions+UIButton.swift */,
+				FE8FF9B32C3DDFDB00A19C03 /* Extensions+UIVC.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,12 +327,20 @@
 				FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */,
 				FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */,
 				FEE75E0E2C32AC0400F39397 /* RegisterViewController.swift in Sources */,
+				FE8FF9B02C3DDB8600A19C03 /* Extensions+UITextField.swift in Sources */,
+				FE8FF9B22C3DDBBE00A19C03 /* Extensions+UIButton.swift in Sources */,
 				FEE75E0A2C32AC0400F39397 /* AppDelegate.swift in Sources */,
 				FEA190D32C3DF8B30088D7D2 /* ConfigExample.swift in Sources */,
 				FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */,
+<<<<<<< HEAD
 				FEA190D12C3DE6550088D7D2 /* Config.swift in Sources */,
 				FE2BEF912C34677C00DAF37A /* Extensions.swift in Sources */,
 				FEA190CD2C3DE3E80088D7D2 /* User.swift in Sources */,
+=======
+				FE8FF9B42C3DDFDB00A19C03 /* Extensions+UIVC.swift in Sources */,
+				FE2BEF8A2C34660C00DAF37A /* Login.swift in Sources */,
+				FE2BEF8C2C34661900DAF37A /* Register.swift in Sources */,
+>>>>>>> develop
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
