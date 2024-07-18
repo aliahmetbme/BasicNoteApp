@@ -85,6 +85,8 @@ iOSInjectionProject/
 ### SwiftPackageManager ###
 xcuserdata
 *.xcuserstate
+BasicNoteApp.xcworkspace/xcuserdata/aliahmeterdogdu.xcuserdatad/
+*.xcodeproj
 ### Xcode ###
 
 ## Xcode 8 and earlier
