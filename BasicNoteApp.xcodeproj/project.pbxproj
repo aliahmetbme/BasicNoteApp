@@ -15,6 +15,11 @@
 		FED5E9E32C49864B00F72C95 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E22C49864B00F72C95 /* Config.swift */; };
 		FED5E9E52C49866A00F72C95 /* ConfigExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E42C49866A00F72C95 /* ConfigExample.swift */; };
 		FED5E9E72C49867600F72C95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E62C49867600F72C95 /* User.swift */; };
+		FED5E9EB2C49E02900F72C95 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9EA2C49E02900F72C95 /* Extension+UIViewController.swift */; };
+		FED5E9EE2C49EB7E00F72C95 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9ED2C49EB7E00F72C95 /* NetworkManager.swift */; };
+		FED5E9F02C49EC1200F72C95 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9EF2C49EC1200F72C95 /* APIEndpoints.swift */; };
+		FED5E9F42C49ECB000F72C95 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9F32C49ECB000F72C95 /* AuthService.swift */; };
+		FED5E9F62C49ECC000F72C95 /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9F52C49ECC000F72C95 /* NoteService.swift */; };
 		FEE75E0A2C32AC0400F39397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E092C32AC0400F39397 /* AppDelegate.swift */; };
 		FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */; };
 		FEE75E0E2C32AC0400F39397 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E0D2C32AC0400F39397 /* RegisterViewController.swift */; };
@@ -31,10 +36,14 @@
 		FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FE8FF9AF2C3DDB8600A19C03 /* Extensions+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextField.swift"; sourceTree = "<group>"; };
 		FE8FF9B12C3DDBBE00A19C03 /* Extensions+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIButton.swift"; sourceTree = "<group>"; };
-		FE8FF9B32C3DDFDB00A19C03 /* Extensions+UIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIVC.swift"; sourceTree = "<group>"; };
 		FED5E9E22C49864B00F72C95 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FED5E9E42C49866A00F72C95 /* ConfigExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigExample.swift; sourceTree = "<group>"; };
 		FED5E9E62C49867600F72C95 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FED5E9EA2C49E02900F72C95 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		FED5E9ED2C49EB7E00F72C95 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FED5E9EF2C49EC1200F72C95 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		FED5E9F32C49ECB000F72C95 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FED5E9F52C49ECC000F72C95 /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
 		FEE75E062C32AC0400F39397 /* BasicNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE75E092C32AC0400F39397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +86,8 @@
 		FE2BEF802C345B6300DAF37A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FED5E9F12C49EC9200F72C95 /* Services */,
+				FED5E9EC2C49EB2000F72C95 /* Network */,
 				FE760B232C36C5C20055E53F /* Notes */,
 				FE2BEF882C3465FB00DAF37A /* Auth */,
 			);
@@ -160,7 +171,7 @@
 			children = (
 				FE8FF9AF2C3DDB8600A19C03 /* Extensions+UITextField.swift */,
 				FE8FF9B12C3DDBBE00A19C03 /* Extensions+UIButton.swift */,
-				FE8FF9B32C3DDFDB00A19C03 /* Extensions+UIVC.swift */,
+				FED5E9EA2C49E02900F72C95 /* Extension+UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -170,6 +181,24 @@
 			children = (
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		FED5E9EC2C49EB2000F72C95 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FED5E9ED2C49EB7E00F72C95 /* NetworkManager.swift */,
+				FED5E9EF2C49EC1200F72C95 /* APIEndpoints.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FED5E9F12C49EC9200F72C95 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FED5E9F32C49ECB000F72C95 /* AuthService.swift */,
+				FED5E9F52C49ECC000F72C95 /* NoteService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		FEE75DFD2C32AC0400F39397 = {
@@ -317,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED5E9EE2C49EB7E00F72C95 /* NetworkManager.swift in Sources */,
 				FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */,
 				FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */,
 				FEE75E0E2C32AC0400F39397 /* RegisterViewController.swift in Sources */,
@@ -324,9 +354,13 @@
 				FED5E9E52C49866A00F72C95 /* ConfigExample.swift in Sources */,
 				FE8FF9B22C3DDBBE00A19C03 /* Extensions+UIButton.swift in Sources */,
 				FED5E9E32C49864B00F72C95 /* Config.swift in Sources */,
+				FED5E9F62C49ECC000F72C95 /* NoteService.swift in Sources */,
+				FED5E9F02C49EC1200F72C95 /* APIEndpoints.swift in Sources */,
 				FEE75E0A2C32AC0400F39397 /* AppDelegate.swift in Sources */,
+				FED5E9EB2C49E02900F72C95 /* Extension+UIViewController.swift in Sources */,
 				FED5E9E72C49867600F72C95 /* User.swift in Sources */,
 				FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */,
+				FED5E9F42C49ECB000F72C95 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,7 @@ class ForgotPasswordViewController: UIViewController {
         super.viewDidLoad()
         resetPasswordButton.makeRadius()
         emailAdressLabel.initialDesign()
+        setBackButtonTitle()
     }
     
     override func viewWillAppear(_ animated: Bool) {

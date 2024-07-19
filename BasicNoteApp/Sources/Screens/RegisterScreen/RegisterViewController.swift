@@ -28,11 +28,9 @@ class RegisterViewController: UIViewController {
         emailAdressLabel.initialDesign()
         passwordLabel.initialDesign()
         registerButton.disabledDesign()
-
+        setBackButtonTitle()
         loginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
-    
-        setBackButtonItemTitle(title: "")
-    }
+        }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
