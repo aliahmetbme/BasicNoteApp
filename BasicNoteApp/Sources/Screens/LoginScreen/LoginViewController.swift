@@ -22,6 +22,11 @@ class LoginViewController: UIViewController {
         emailAdressLabel.initialDesign()
         passwordLabel.initialDesign()
         setBackButtonTitle()  // Corrected method name
+        
+        loginSucces = {token in
+            UserDefaults.standard.setValue(token, forKey: "accesToken")
+            self.performSegue(withIdentifier: "goNotesPage", sender: nil)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,14 +48,14 @@ extension LoginViewController {
     @IBAction private func login(_ sender: Any) {
         let user = UserLogin(password: passwordLabel.text!, email: emailAdressLabel.text!)
         
-        auhtService.login(user: user) { [weak self] result in
+        auhtService.login(user: user) { result in
             switch result {
             case .success(let response):
               // bunlar lazım mı ?
-              //  self?.loginSucces?(response.data.accessToken)
+                self.loginSucces?(response.data.accessToken)
                 print("Success")
             case .failure(let error):
-               // self?.loginError?(error)
+                self.loginError?(error)
                 print("Error")
                 print(error)
             }

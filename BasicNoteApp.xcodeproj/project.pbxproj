@@ -10,6 +10,10 @@
 		B4F54960F8D5067EB704A2FD /* Pods_BasicNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3799336ED2C5BE62AC5AF0DB /* Pods_BasicNoteApp.framework */; };
 		FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */; };
 		FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */; };
+		FE725EEB2C4AE9F800FA2032 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */; };
+		FE725EED2C4AEA2D00FA2032 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725EEC2C4AEA2D00FA2032 /* UserResponse.swift */; };
+		FE725EEF2C4AEE7500FA2032 /* NoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725EEE2C4AEE7500FA2032 /* NoteResponse.swift */; };
+		FE7548992C4B2CFF00362778 /* NotesScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7548982C4B2CFF00362778 /* NotesScreenViewController.swift */; };
 		FE8FF9B02C3DDB8600A19C03 /* Extensions+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8FF9AF2C3DDB8600A19C03 /* Extensions+UITextField.swift */; };
 		FE8FF9B22C3DDBBE00A19C03 /* Extensions+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8FF9B12C3DDBBE00A19C03 /* Extensions+UIButton.swift */; };
 		FED5E9E32C49864B00F72C95 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E22C49864B00F72C95 /* Config.swift */; };
@@ -34,6 +38,10 @@
 		F0B478FB940B4BB00B7F1FA2 /* Pods-BasicNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicNoteApp.debug.xcconfig"; path = "Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		FE725EEC2C4AEA2D00FA2032 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		FE725EEE2C4AEE7500FA2032 /* NoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteResponse.swift; sourceTree = "<group>"; };
+		FE7548982C4B2CFF00362778 /* NotesScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesScreenViewController.swift; sourceTree = "<group>"; };
 		FE8FF9AF2C3DDB8600A19C03 /* Extensions+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextField.swift"; sourceTree = "<group>"; };
 		FE8FF9B12C3DDBBE00A19C03 /* Extensions+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIButton.swift"; sourceTree = "<group>"; };
 		FED5E9E22C49864B00F72C95 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -86,8 +94,7 @@
 		FE2BEF802C345B6300DAF37A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FED5E9F12C49EC9200F72C95 /* Services */,
-				FED5E9EC2C49EB2000F72C95 /* Network */,
+				FE725EE92C4A896C00FA2032 /* ResponceModels */,
 				FE760B232C36C5C20055E53F /* Notes */,
 				FE2BEF882C3465FB00DAF37A /* Auth */,
 			);
@@ -107,6 +114,33 @@
 				FED5E9E62C49867600F72C95 /* User.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		FE725EE82C4A86DB00FA2032 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FED5E9EC2C49EB2000F72C95 /* Network */,
+				FED5E9F12C49EC9200F72C95 /* Services */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FE725EE92C4A896C00FA2032 /* ResponceModels */ = {
+			isa = PBXGroup;
+			children = (
+				FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */,
+				FE725EEC2C4AEA2D00FA2032 /* UserResponse.swift */,
+				FE725EEE2C4AEE7500FA2032 /* NoteResponse.swift */,
+			);
+			path = ResponceModels;
+			sourceTree = "<group>";
+		};
+		FE7548972C4B2CD900362778 /* NotesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE7548982C4B2CFF00362778 /* NotesScreenViewController.swift */,
+			);
+			path = NotesScreen;
 			sourceTree = "<group>";
 		};
 		FE760B1C2C3697660055E53F /* Sources */ = {
@@ -135,6 +169,7 @@
 		FE760B1E2C3697880055E53F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FE7548972C4B2CD900362778 /* NotesScreen */,
 				FE760B212C3698AC0055E53F /* ForgotPasswordScreen */,
 				FE760B202C3698950055E53F /* LoginScreen */,
 				FE760B1F2C3698880055E53F /* RegisterScreen */,
@@ -222,6 +257,7 @@
 		FEE75E082C32AC0400F39397 /* BasicNoteApp */ = {
 			isa = PBXGroup;
 			children = (
+				FE725EE82C4A86DB00FA2032 /* Helper */,
 				FED5E9E42C49866A00F72C95 /* ConfigExample.swift */,
 				FED5E9E22C49864B00F72C95 /* Config.swift */,
 				FEE75E0F2C32AC0400F39397 /* Main.storyboard */,
@@ -346,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE725EEF2C4AEE7500FA2032 /* NoteResponse.swift in Sources */,
 				FED5E9EE2C49EB7E00F72C95 /* NetworkManager.swift in Sources */,
 				FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */,
 				FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */,
@@ -353,6 +390,8 @@
 				FE8FF9B02C3DDB8600A19C03 /* Extensions+UITextField.swift in Sources */,
 				FED5E9E52C49866A00F72C95 /* ConfigExample.swift in Sources */,
 				FE8FF9B22C3DDBBE00A19C03 /* Extensions+UIButton.swift in Sources */,
+				FE725EED2C4AEA2D00FA2032 /* UserResponse.swift in Sources */,
+				FE7548992C4B2CFF00362778 /* NotesScreenViewController.swift in Sources */,
 				FED5E9E32C49864B00F72C95 /* Config.swift in Sources */,
 				FED5E9F62C49ECC000F72C95 /* NoteService.swift in Sources */,
 				FED5E9F02C49EC1200F72C95 /* APIEndpoints.swift in Sources */,
@@ -360,6 +399,7 @@
 				FED5E9EB2C49E02900F72C95 /* Extension+UIViewController.swift in Sources */,
 				FED5E9E72C49867600F72C95 /* User.swift in Sources */,
 				FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */,
+				FE725EEB2C4AE9F800FA2032 /* AuthResponse.swift in Sources */,
 				FED5E9F42C49ECB000F72C95 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

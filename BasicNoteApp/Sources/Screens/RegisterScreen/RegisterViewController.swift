@@ -15,7 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet private var passwordLabel: UITextField!
     @IBOutlet private var registerButton: UIButton!
     @IBOutlet private var loginButton: UIButton!
-    
+    let authService = AuthService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,19 +41,15 @@ class RegisterViewController: UIViewController {
 extension RegisterViewController {
     
     @IBAction private func register(_ sender: Any) {
-        let parameters = UserRegister(password: passwordLabel.text! , email: emailAdressLabel.text! , full_name: fullNameLabel.text!)
+        let user = UserRegister(password: passwordLabel.text! , email: emailAdressLabel.text! , full_name: fullNameLabel.text!)
         
-        AF.request("\(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.register)", method: .post, parameters: parameters, encoder: JSONParameterEncoder.default).response {response in
-            
-            if let data = response.data {
-                do {
-                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
-                        print(json)
-                    }
-                } catch {
-                    print("error")
-                    print(error.localizedDescription)
-                }
+        authService.register(user: user) { result in
+            switch result {
+            case .success(let response):
+                print(response)
+                self.performSegue(withIdentifier: "goLoginPage", sender: nil)
+            case .failure(let error):
+                print(error)
             }
         }
     }

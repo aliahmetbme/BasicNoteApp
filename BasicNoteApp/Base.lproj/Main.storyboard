@@ -283,12 +283,43 @@
                         <outlet property="goRegisterPageButton" destination="ssy-p8-Ohh" id="0re-ra-E1h"/>
                         <outlet property="passwordLabel" destination="yR1-i2-uRB" id="Ihi-gE-F5X"/>
                         <segue destination="vzN-RE-XNn" kind="show" identifier="goForgorVC" id="zpw-lI-7wm"/>
+                        <segue destination="sUL-vh-ATn" kind="show" identifier="goNotesPage" id="jmS-Ra-BAz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oud-GS-usa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="Gay-SQ-3au"/>
             </objects>
             <point key="canvasLocation" x="1163" y="-457"/>
+        </scene>
+        <!--Notes Screen View Controller-->
+        <scene sceneID="y9l-sa-e5j">
+            <objects>
+                <viewController id="sUL-vh-ATn" customClass="NotesScreenViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YPV-3u-JJo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLW-mV-hht">
+                                <rect key="frame" x="89" y="400" width="215" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EQk-7o-sIE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EQk-7o-sIE" firstAttribute="bottom" secondItem="GLW-mV-hht" secondAttribute="bottom" constant="365" id="9M7-Wk-Day"/>
+                            <constraint firstItem="EQk-7o-sIE" firstAttribute="trailing" secondItem="GLW-mV-hht" secondAttribute="trailing" constant="89" id="WaU-zB-A8I"/>
+                            <constraint firstItem="GLW-mV-hht" firstAttribute="top" secondItem="EQk-7o-sIE" secondAttribute="top" constant="297" id="lxM-a3-LCn"/>
+                            <constraint firstItem="GLW-mV-hht" firstAttribute="leading" secondItem="EQk-7o-sIE" secondAttribute="leading" constant="89" id="yKQ-13-rnP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KxF-T7-Ehn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jeg-o8-HHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275.5725190839694" y="-457.04225352112678"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="VHP-2X-Tfg">
@@ -400,7 +431,7 @@ the instructions.</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

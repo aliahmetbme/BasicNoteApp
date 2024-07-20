@@ -18,37 +18,16 @@ class AuthService {
         NetworkManager.shared.request(.login, method: .post, parameters: parameters, completion: completion)
     }
     
-    func register(user: UserLogin, completion: @escaping (Result<RegisterResponse, Error>) -> Void) {
+    func register(user: UserRegister, completion: @escaping (Result<RegisterResponse, Error>) -> Void) {
         let parameters: Parameters = [
             "email": user.email,
+            "full_name": user.full_name,
             "password": user.password
         ]
         
         NetworkManager.shared.request(.register, method: .post, parameters: parameters, completion: completion)
     }
-}
-
-struct TokenData: Decodable {
-    let accessToken: String
-    let tokenType: String
     
-    private enum CodingKeys: String, CodingKey {
-        case accessToken = "access_token"
-        case tokenType = "token_type"
-    }
-}
-
-struct SuccesfulLoginResponse: Decodable {
-    let code: String
-    let data: TokenData
-    let message: String
-}
-
-struct FailedLoginResponse: Decodable {
-    let code: String
-    let message: String
-}
-
-struct RegisterResponse: Decodable {
-    let success: Bool
+    func forgotPassword() {}
+    
 }
