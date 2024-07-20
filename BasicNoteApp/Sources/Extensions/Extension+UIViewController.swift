@@ -9,9 +9,10 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func setBackButtonTitle(title: String = "") {
+    func setBackButtonTitle(title: String = "", isHideNavBar: Bool = true) {
         let backButton = UIBarButtonItem()
         backButton.title = title
         self.navigationItem.backBarButtonItem = backButton
+        self.navigationController?.navigationBar.isHidden = false
     }
 }

@@ -18,6 +18,7 @@ class NetworkManager {
             completion(.failure(NetworkError.invalidURL))
             return
         }
+        print(url)
         // Set encoding based on HTTP method
         let encoding: ParameterEncoding
         switch method {

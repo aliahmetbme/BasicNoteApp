@@ -299,27 +299,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLW-mV-hht">
-                                <rect key="frame" x="89" y="400" width="215" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rFQ-kz-L8L">
+                                <rect key="frame" x="0.0" y="103" width="393" height="660.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notecell" rowHeight="130" id="q9b-kz-EiY" customClass="NoteViewCell" customModule="BasicNoteApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q9b-kz-EiY" id="5bT-oF-8yB">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemon Cake &amp; Blueberry" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XF8-Lb-76S">
+                                                    <rect key="frame" x="44" y="19" width="324" height="19"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" name="noteTitle"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunshine-sweet lemon blueberry layer cake dotted with juicy berries and topped with lush cream cheese…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipI-JC-7sM">
+                                                    <rect key="frame" x="44" y="48" width="324" height="61"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="ehJ-ck-PjB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="noteColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ipI-JC-7sM" firstAttribute="top" secondItem="XF8-Lb-76S" secondAttribute="bottom" constant="10" id="4X8-0a-PMx"/>
+                                                <constraint firstItem="ipI-JC-7sM" firstAttribute="leading" secondItem="5bT-oF-8yB" secondAttribute="leadingMargin" constant="24" id="KXa-og-iwr"/>
+                                                <constraint firstItem="XF8-Lb-76S" firstAttribute="top" secondItem="5bT-oF-8yB" secondAttribute="topMargin" constant="8" id="NSH-Qc-asq"/>
+                                                <constraint firstItem="XF8-Lb-76S" firstAttribute="leading" secondItem="5bT-oF-8yB" secondAttribute="leadingMargin" constant="24" id="ez1-lk-EdS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ipI-JC-7sM" secondAttribute="bottom" constant="10" id="hZ5-Fo-taR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ipI-JC-7sM" secondAttribute="trailing" constant="5" id="iZe-Bq-MGL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XF8-Lb-76S" secondAttribute="trailing" constant="5" id="u5F-HJ-n3y"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="note" destination="ipI-JC-7sM" id="2S2-bl-M7L"/>
+                                            <outlet property="title" destination="XF8-Lb-76S" id="VVH-m4-hvX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdS-Wp-FGh">
+                                <rect key="frame" x="130" y="768.66666666666663" width="133" height="34.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="133" id="ff3-aq-5ys"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Add Note" image="plus" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="Add Note">
+                                    <color key="baseBackgroundColor" name="signuptext"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EQk-7o-sIE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EQk-7o-sIE" firstAttribute="bottom" secondItem="GLW-mV-hht" secondAttribute="bottom" constant="365" id="9M7-Wk-Day"/>
-                            <constraint firstItem="EQk-7o-sIE" firstAttribute="trailing" secondItem="GLW-mV-hht" secondAttribute="trailing" constant="89" id="WaU-zB-A8I"/>
-                            <constraint firstItem="GLW-mV-hht" firstAttribute="top" secondItem="EQk-7o-sIE" secondAttribute="top" constant="297" id="lxM-a3-LCn"/>
-                            <constraint firstItem="GLW-mV-hht" firstAttribute="leading" secondItem="EQk-7o-sIE" secondAttribute="leading" constant="89" id="yKQ-13-rnP"/>
+                            <constraint firstItem="rFQ-kz-L8L" firstAttribute="top" secondItem="EQk-7o-sIE" secondAttribute="top" id="GV7-sg-eXB"/>
+                            <constraint firstItem="hdS-Wp-FGh" firstAttribute="top" secondItem="rFQ-kz-L8L" secondAttribute="bottom" constant="5" id="Mh7-Z1-Zuy"/>
+                            <constraint firstItem="rFQ-kz-L8L" firstAttribute="leading" secondItem="EQk-7o-sIE" secondAttribute="leading" id="XTD-Nm-p45"/>
+                            <constraint firstItem="EQk-7o-sIE" firstAttribute="trailing" secondItem="rFQ-kz-L8L" secondAttribute="trailing" id="bHk-jm-J6s"/>
+                            <constraint firstItem="EQk-7o-sIE" firstAttribute="bottom" secondItem="hdS-Wp-FGh" secondAttribute="bottom" constant="15" id="pa1-MO-S4P"/>
+                            <constraint firstItem="hdS-Wp-FGh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="EQk-7o-sIE" secondAttribute="leading" priority="999" constant="130" id="vba-SP-TdH"/>
+                            <constraint firstItem="EQk-7o-sIE" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hdS-Wp-FGh" secondAttribute="trailing" priority="999" constant="130" id="vhO-nY-bbc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KxF-T7-Ehn"/>
+                    <navigationItem key="navigationItem" id="KxF-T7-Ehn">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="notesTable" destination="rFQ-kz-L8L" id="bhP-At-Pt7"/>
+                        <segue destination="3Bk-Nx-GpS" kind="show" id="c6J-Fc-DRW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jeg-o8-HHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2275.5725190839694" y="-457.04225352112678"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Kk-Cs-j8P">
+            <objects>
+                <viewController id="3Bk-Nx-GpS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D3r-al-lSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ylF-2L-l4S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3rd-6D-ABu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncL-Xu-4N6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3251" y="-457"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="VHP-2X-Tfg">
@@ -415,8 +489,15 @@ the instructions.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="buttonLoginDisabled">
             <color red="0.86274509803921573" green="0.86274509803921573" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="noteColor">
+            <color red="0.54509803921568623" green="0.58431372549019611" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="noteTitle">
+            <color red="0.13725490196078433" green="0.13725490196078433" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="signuptext">
             <color red="0.54509803921568623" green="0.5490196078431373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

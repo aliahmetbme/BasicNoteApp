@@ -14,9 +14,9 @@ struct NoteResponseModel: Codable {
 }
 
 struct Note: Codable{
-    let title: String
-    let note: String
     let id: Int
+    let note: String
+    let title: String
 }
 
 struct NoteData: Codable {
@@ -30,7 +30,7 @@ struct NoteData: Codable {
     let nextPageURL: String?
     let path: String
     let perPage: Int
-    let prevPageURL: String
+    let prevPageURL: String?
     let to: Int?
     let total: Int
     
@@ -55,4 +55,10 @@ struct Link: Codable {
     let url: String?
     let label: String
     let active: Bool
+}
+
+struct DeletedNote: Codable {
+    let code: String
+    let data: String?
+    let message: String
 }

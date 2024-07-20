@@ -27,6 +27,10 @@ class LoginViewController: UIViewController {
             UserDefaults.standard.setValue(token, forKey: "accesToken")
             self.performSegue(withIdentifier: "goNotesPage", sender: nil)
         }
+        
+        loginError = { error in
+            print(error.localizedDescription)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,17 +55,10 @@ extension LoginViewController {
         auhtService.login(user: user) { result in
             switch result {
             case .success(let response):
-              // bunlar lazım mı ?
                 self.loginSucces?(response.data.accessToken)
-                print("Success")
             case .failure(let error):
                 self.loginError?(error)
-                print("Error")
-                print(error)
             }
         }
-      
     }
-
-    
 }

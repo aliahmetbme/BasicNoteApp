@@ -19,7 +19,7 @@ enum APIEndpoint {
     case getNote
     case createNote
     case updateNote
-    case deleteNote
+    case deleteNote(note_id: Int)
     
     var urlString: String {
         switch self {
@@ -34,8 +34,8 @@ enum APIEndpoint {
             return "https://api.example.com/register"
         case .updateNote:
             return "https://api.example.com/register"
-        case .deleteNote:
-            return "https://api.example.com/register"
+        case .deleteNote(note_id: let note_id):
+            return "\(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.deleteNote)\(note_id)"
         case .forgotpassword:
             return "https://api.example.com/register"
         case .me:
