@@ -18,12 +18,9 @@ class NotesScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackButtonTitle(isHideNavBar: false)
+        setBackButtonTitle()
         noteTakenSucces = { data in
-            print(data)
-            self.notesArray = (data)
-            
-            print(self.notesArray as Any)
+            self.notesArray = data
             self.notesTable.reloadData()
         }
         
@@ -31,6 +28,12 @@ class NotesScreenViewController: UIViewController {
         notesTable.dataSource = self
         getAllNotes()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setBackButtonTitle()
+        getAllNotes()
     }
     
     private func getAllNotes(){
@@ -46,9 +49,28 @@ class NotesScreenViewController: UIViewController {
     }
 }
 
+// Actions
+extension NotesScreenViewController {
+    @IBAction func showAddNotePage(_ sender: Any) {
+      performSegue(withIdentifier: "showAddNotePage", sender: nil)
+    }
+}
 
+// Table View
 extension NotesScreenViewController: UITableViewDelegate, UITableViewDataSource {
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "goEditNoteVC") {
+            if let id = sender as? Int {
+                let nextVC = segue.destination as! EditNoteViewController
+                nextVC.id = id
+            }
+        } else if (segue.identifier ==  "showAddNotePage") {
+            let nextVC = segue.destination as! AddNoteScreenViewController
+            nextVC.onDismiss = {
+                self.getAllNotes()
+            }
+        }
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notesArray.count
     }
@@ -67,6 +89,7 @@ extension NotesScreenViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let note = notesArray[indexPath.row]
         let editAction = UIContextualAction(style: .normal, title: "") { (_, _, completionHandler) in
+            self.performSegue(withIdentifier: "goEditNoteVC", sender: note.id)
             completionHandler(true)
         }
         editAction.backgroundColor = .systemYellow

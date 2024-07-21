@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -277,7 +278,6 @@
                             <outletCollection property="gestureRecognizers" destination="Gay-SQ-3au" appends="YES" id="6qa-lA-fac"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" customizationIdentifier="" id="bEw-z8-pHW"/>
                     <connections>
                         <outlet property="emailAdressLabel" destination="Ssq-K3-enw" id="auO-eM-0C2"/>
                         <outlet property="goRegisterPageButton" destination="ssy-p8-Ohh" id="0re-ra-E1h"/>
@@ -300,30 +300,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rFQ-kz-L8L">
-                                <rect key="frame" x="0.0" y="103" width="393" height="660.66666666666663"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="661.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notecell" rowHeight="130" id="q9b-kz-EiY" customClass="NoteViewCell" customModule="BasicNoteApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="130"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notecell" rowHeight="89" id="q9b-kz-EiY" customClass="NoteViewCell" customModule="BasicNoteApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q9b-kz-EiY" id="5bT-oF-8yB">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemon Cake &amp; Blueberry" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XF8-Lb-76S">
-                                                    <rect key="frame" x="44" y="19" width="324" height="19"/>
+                                                    <rect key="frame" x="44" y="19" width="324" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" name="noteTitle"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunshine-sweet lemon blueberry layer cake dotted with juicy berries and topped with lush cream cheese…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipI-JC-7sM">
-                                                    <rect key="frame" x="44" y="48" width="324" height="61"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunshine-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipI-JC-7sM">
+                                                    <rect key="frame" x="44" y="49.333333333333336" width="324" height="25.000000000000007"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="ehJ-ck-PjB"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="ehJ-ck-PjB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="noteColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -331,7 +332,7 @@
                                                 <constraint firstItem="ipI-JC-7sM" firstAttribute="leading" secondItem="5bT-oF-8yB" secondAttribute="leadingMargin" constant="24" id="KXa-og-iwr"/>
                                                 <constraint firstItem="XF8-Lb-76S" firstAttribute="top" secondItem="5bT-oF-8yB" secondAttribute="topMargin" constant="8" id="NSH-Qc-asq"/>
                                                 <constraint firstItem="XF8-Lb-76S" firstAttribute="leading" secondItem="5bT-oF-8yB" secondAttribute="leadingMargin" constant="24" id="ez1-lk-EdS"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ipI-JC-7sM" secondAttribute="bottom" constant="10" id="hZ5-Fo-taR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ipI-JC-7sM" secondAttribute="bottom" constant="5" id="f76-NO-mtP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ipI-JC-7sM" secondAttribute="trailing" constant="5" id="iZe-Bq-MGL"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="XF8-Lb-76S" secondAttribute="trailing" constant="5" id="u5F-HJ-n3y"/>
                                             </constraints>
@@ -344,15 +345,21 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdS-Wp-FGh">
-                                <rect key="frame" x="130" y="768.66666666666663" width="133" height="34.333333333333371"/>
+                                <rect key="frame" x="130" y="769.66666666666663" width="133" height="33.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="133" id="ff3-aq-5ys"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Add Note" image="plus" catalog="system"/>
-                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="Add Note">
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="leading" title="Add Note" imagePadding="3">
+                                    <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="16" scale="large"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
                                     <color key="baseBackgroundColor" name="signuptext"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="showAddNotePage:" destination="sUL-vh-ATn" eventType="touchUpInside" id="duO-bU-nUx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EQk-7o-sIE"/>
@@ -367,33 +374,81 @@
                             <constraint firstItem="EQk-7o-sIE" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hdS-Wp-FGh" secondAttribute="trailing" priority="999" constant="130" id="vhO-nY-bbc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KxF-T7-Ehn">
-                        <nil key="title"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="notesTable" destination="rFQ-kz-L8L" id="bhP-At-Pt7"/>
-                        <segue destination="3Bk-Nx-GpS" kind="show" id="c6J-Fc-DRW"/>
+                        <segue destination="3Bk-Nx-GpS" kind="show" identifier="goEditNoteVC" id="c6J-Fc-DRW"/>
+                        <segue destination="bqe-cr-7nm" kind="presentation" identifier="showAddNotePage" id="FC0-ay-k1j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jeg-o8-HHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2275.5725190839694" y="-457.04225352112678"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Note-->
         <scene sceneID="8Kk-Cs-j8P">
             <objects>
-                <viewController id="3Bk-Nx-GpS" sceneMemberID="viewController">
+                <viewController id="3Bk-Nx-GpS" customClass="EditNoteViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D3r-al-lSJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemon Cake &amp; Blueberry" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oa-bP-0H2">
+                                <rect key="frame" x="24" y="122.99999999999999" width="364" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y6a-72-5cp">
+                                <rect key="frame" x="24" y="159.33333333333334" width="364" height="137.00000000000003"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="137" id="3za-h8-cTM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="137" id="9Gq-uU-6fD"/>
+                                </constraints>
+                                <string key="text">Having other strong marketing campaigns centered around fall can set you apart from competitors. It will also encourage customers to search out your deals by the time Black Friday comes around. In creating a separate fall campaign from the average Black Friday one, you are able to attract earlier holiday shoppers, while building brand visibility and awareness,</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFW-iF-JdS">
+                                <rect key="frame" x="130" y="301.33333333333331" width="133" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="133" id="wU2-9d-KYn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save Note" titleAlignment="center">
+                                    <backgroundConfiguration key="background"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="baseBackgroundColor" name="signuptext"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveNote:" destination="3Bk-Nx-GpS" eventType="touchUpInside" id="804-42-Bgm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ylF-2L-l4S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y6a-72-5cp" firstAttribute="leading" secondItem="ylF-2L-l4S" secondAttribute="leading" constant="24" id="5Kf-To-UpU"/>
+                            <constraint firstItem="3oa-bP-0H2" firstAttribute="top" secondItem="ylF-2L-l4S" secondAttribute="top" constant="20" id="5Kw-4K-8Rn"/>
+                            <constraint firstItem="ylF-2L-l4S" firstAttribute="trailing" secondItem="3oa-bP-0H2" secondAttribute="trailing" constant="5" id="6GO-fQ-F6q"/>
+                            <constraint firstItem="y6a-72-5cp" firstAttribute="top" secondItem="3oa-bP-0H2" secondAttribute="bottom" constant="10" id="Apu-KX-khs"/>
+                            <constraint firstItem="jFW-iF-JdS" firstAttribute="top" secondItem="y6a-72-5cp" secondAttribute="bottom" constant="5" id="GSd-dt-kgt"/>
+                            <constraint firstItem="3oa-bP-0H2" firstAttribute="leading" secondItem="ylF-2L-l4S" secondAttribute="leading" constant="24" id="Ihj-mT-zdx"/>
+                            <constraint firstItem="jFW-iF-JdS" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ylF-2L-l4S" secondAttribute="leading" priority="999" constant="130" id="KML-gG-Rs1"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="jFW-iF-JdS" secondAttribute="trailing" priority="999" constant="130" id="nzN-rs-jzp"/>
+                            <constraint firstItem="ylF-2L-l4S" firstAttribute="trailing" secondItem="y6a-72-5cp" secondAttribute="trailing" constant="5" id="tv0-wK-7vV"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3rd-6D-ABu"/>
+                    <navigationItem key="navigationItem" title="Edit Note" id="UdN-0q-KKw"/>
+                    <connections>
+                        <outlet property="note_detail" destination="y6a-72-5cp" id="dpL-1I-Ui6"/>
+                        <outlet property="note_title" destination="3oa-bP-0H2" id="ihi-lU-sQQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncL-Xu-4N6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3251" y="-457"/>
+            <point key="canvasLocation" x="3249.6183206106871" y="-457.04225352112678"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="VHP-2X-Tfg">
@@ -466,6 +521,93 @@ the instructions.</string>
             </objects>
             <point key="canvasLocation" x="1162.5954198473282" y="377.46478873239437"/>
         </scene>
+        <!--Add Note Screen View Controller-->
+        <scene sceneID="TDu-Uc-0im">
+            <objects>
+                <viewController id="bqe-cr-7nm" customClass="AddNoteScreenViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5mW-I1-qYG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lemon Cake &amp; Blueberry" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0TL-0S-ceS">
+                                <rect key="frame" x="24" y="68" width="364" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="MpH-m5-XUM"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THa-e0-kUl">
+                                <rect key="frame" x="24" y="40" width="364" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" name="noteTitle"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8V-uU-xM2">
+                                <rect key="frame" x="24" y="177" width="364" height="21.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" name="noteTitle"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lemon Cake &amp; Blueberry" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OsY-l5-bYS">
+                                <rect key="frame" x="24" y="203.66666666666666" width="364" height="79.999999999999972"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="H1j-RN-LEu"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7M2-XE-LOz">
+                                <rect key="frame" x="130" y="293.66666666666669" width="133" height="33.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="133" id="NqN-we-nHr"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Add Note" image="plus" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="leading" title="Add Note" imagePadding="3">
+                                    <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="16" scale="large"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
+                                    <color key="baseBackgroundColor" name="signuptext"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addNote:" destination="bqe-cr-7nm" eventType="touchUpInside" id="aiG-n7-txx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fDH-a9-P7d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fDH-a9-P7d" firstAttribute="trailing" secondItem="7M2-XE-LOz" secondAttribute="trailing" constant="130" id="39c-dT-9Lx"/>
+                            <constraint firstItem="0TL-0S-ceS" firstAttribute="leading" secondItem="fDH-a9-P7d" secondAttribute="leading" constant="24" id="5T2-Ix-L9R"/>
+                            <constraint firstItem="OsY-l5-bYS" firstAttribute="top" secondItem="E8V-uU-xM2" secondAttribute="bottom" constant="5" id="7dP-zg-ix9"/>
+                            <constraint firstItem="0TL-0S-ceS" firstAttribute="top" secondItem="THa-e0-kUl" secondAttribute="bottom" constant="5" id="AGx-gz-jIx"/>
+                            <constraint firstItem="OsY-l5-bYS" firstAttribute="leading" secondItem="fDH-a9-P7d" secondAttribute="leading" constant="24" id="IS3-DX-Jsd"/>
+                            <constraint firstItem="fDH-a9-P7d" firstAttribute="trailing" secondItem="E8V-uU-xM2" secondAttribute="trailing" constant="5" id="MvZ-Ga-10S"/>
+                            <constraint firstItem="E8V-uU-xM2" firstAttribute="top" secondItem="0TL-0S-ceS" secondAttribute="bottom" constant="29" id="Y9c-It-yDu"/>
+                            <constraint firstItem="fDH-a9-P7d" firstAttribute="trailing" secondItem="OsY-l5-bYS" secondAttribute="trailing" constant="5" id="bEJ-cm-viJ"/>
+                            <constraint firstItem="7M2-XE-LOz" firstAttribute="top" secondItem="OsY-l5-bYS" secondAttribute="bottom" constant="10" id="c9Z-FW-f7C"/>
+                            <constraint firstItem="fDH-a9-P7d" firstAttribute="trailing" secondItem="0TL-0S-ceS" secondAttribute="trailing" constant="5" id="dwV-iW-iyT"/>
+                            <constraint firstItem="fDH-a9-P7d" firstAttribute="trailing" secondItem="THa-e0-kUl" secondAttribute="trailing" constant="5" id="kgR-AR-599"/>
+                            <constraint firstItem="7M2-XE-LOz" firstAttribute="leading" secondItem="fDH-a9-P7d" secondAttribute="leading" constant="130" id="uhQ-Ye-lEi"/>
+                            <constraint firstItem="E8V-uU-xM2" firstAttribute="leading" secondItem="fDH-a9-P7d" secondAttribute="leading" constant="24" id="vOP-nR-3eW"/>
+                            <constraint firstItem="THa-e0-kUl" firstAttribute="leading" secondItem="fDH-a9-P7d" secondAttribute="leading" constant="24" id="wyb-SB-V3e"/>
+                            <constraint firstItem="THa-e0-kUl" firstAttribute="top" secondItem="fDH-a9-P7d" secondAttribute="top" constant="40" id="yyV-Sm-TaL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="note_description" destination="OsY-l5-bYS" id="TR7-92-mAm"/>
+                        <outlet property="note_title" destination="0TL-0S-ceS" id="QCi-Ba-D41"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TU8-lR-LDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275.5725190839694" y="424.64788732394368"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Rp-2f-wrE">
             <objects>
@@ -476,9 +618,6 @@ the instructions.</string>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xc3-YQ-nXo">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
                         <segue destination="ypT-rB-Ogn" kind="relationship" relationship="rootViewController" id="wXA-U5-z3V"/>
                     </connections>
@@ -508,6 +647,9 @@ the instructions.</string>
         <namedColor name="textSecondary">
             <color red="0.51372549019607838" green="0.55294117647058827" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

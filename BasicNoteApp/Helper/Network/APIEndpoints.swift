@@ -10,15 +10,14 @@ import Foundation
 enum APIEndpoint {
     case login
     case register
-    case getNotes
     case forgotpassword
     case me
     case mynotes(page: Int = 1)
     case updateme
     case updatepassword
-    case getNote
+    case getNote(note_id: Int)
     case createNote
-    case updateNote
+    case updateNote(note_id: Int)
     case deleteNote(note_id: Int)
     
     var urlString: String {
@@ -28,12 +27,12 @@ enum APIEndpoint {
             return "https://basicnoteapp.mobillium.com/api/auth/login"
         case .register:
             return "https://basicnoteapp.mobillium.com/api/auth/register"
-        case .getNotes:
-            return "https://api.example.com/register"
+        case .getNote(note_id: let note_id):
+            return "\(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.deleteNote)\(note_id)"
         case .createNote:
-            return "https://api.example.com/register"
-        case .updateNote:
-            return "https://api.example.com/register"
+            return "\(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.getNote)"
+        case .updateNote(note_id: let note_id):
+            return "\(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.getNote)\(note_id)"
         case .deleteNote(note_id: let note_id):
             return "\(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.deleteNote)\(note_id)"
         case .forgotpassword:

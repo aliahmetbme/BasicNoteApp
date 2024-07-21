@@ -13,10 +13,22 @@ struct NoteResponseModel: Codable {
     let message: String
 }
 
+struct AddNoteResponseModel: Codable {
+    let code: String
+    let data: Note
+    let message: String
+}
+
+struct SpecificNoteResponseModel: Codable {
+    let code: String
+    let data: Note
+    let message: String
+}
+
 struct Note: Codable{
     let id: Int
-    let note: String
     let title: String
+    let note: String
 }
 
 struct NoteData: Codable {
