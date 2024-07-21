@@ -529,7 +529,7 @@ the instructions.</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lemon Cake &amp; Blueberry" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0TL-0S-ceS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0TL-0S-ceS">
                                 <rect key="frame" x="24" y="68" width="364" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -551,7 +551,7 @@ the instructions.</string>
                                 <color key="textColor" name="noteTitle"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lemon Cake &amp; Blueberry" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OsY-l5-bYS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OsY-l5-bYS">
                                 <rect key="frame" x="24" y="203.66666666666666" width="364" height="79.999999999999972"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
