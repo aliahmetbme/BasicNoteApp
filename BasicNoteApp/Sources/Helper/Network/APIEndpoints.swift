@@ -38,15 +38,13 @@ enum APIEndpoint {
         case .forgotpassword:
             return "https://api.example.com/register"
         case .me:
-            return "https://api.example.com/register"
+            return "https://basicnoteapp.mobillium.com/api/users/me"
         case .mynotes(page: let page):
             return "https://basicnoteapp.mobillium.com/api/users/me/notes?page=\(page)"
         case .updateme:
-            return "https://api.example.com/register"
+            return "https://basicnoteapp.mobillium.com/api/users/me"
         case .updatepassword:
-            return "https://api.example.com/register"
-        case .getNote:
-            return "https://api.example.com/register"
+            return "https://basicnoteapp.mobillium.com/api/users/me/password"
         }
     }
 }

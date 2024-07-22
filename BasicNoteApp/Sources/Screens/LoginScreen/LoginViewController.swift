@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         goRegisterPageButton.setAttributedTitle(part1: "New User? ", color1: UIColor.black, part2: "Sign up now", color2: UIColor.signuptext, for: .normal)
         emailAdressLabel.initialDesign()
         passwordLabel.initialDesign()
-        setBackButtonTitle()  // Corrected method name
+        setBackButtonTitle(isHideNavBar: false)  // Corrected method name
         
         loginSucces = {token in
             UserDefaults.standard.setValue(token, forKey: "accesToken")
@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated) // Added this line for completeness
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = false
     }
 }
 

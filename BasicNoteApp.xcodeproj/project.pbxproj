@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B4F54960F8D5067EB704A2FD /* Pods_BasicNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3799336ED2C5BE62AC5AF0DB /* Pods_BasicNoteApp.framework */; };
+		FE24B3452C4E90820024C9F7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24B3442C4E90820024C9F7 /* UserService.swift */; };
+		FE24B3472C4EBDAD0024C9F7 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24B3462C4EBDAD0024C9F7 /* ErrorResponse.swift */; };
 		FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */; };
 		FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */; };
 		FE725EEB2C4AE9F800FA2032 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */; };
@@ -20,6 +22,8 @@
 		FE9652072C4C6713006B9E50 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9652062C4C6713006B9E50 /* EditNoteViewController.swift */; };
 		FE96520A2C4C904E006B9E50 /* AddNoteScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9652092C4C904E006B9E50 /* AddNoteScreenViewController.swift */; };
 		FE96520C2C4C9184006B9E50 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE96520B2C4C9184006B9E50 /* NoteModel.swift */; };
+		FEA20F6C2C4E8DB100D401FE /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA20F6B2C4E8DB100D401FE /* ProfileScreenViewController.swift */; };
+		FEA20F6E2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA20F6D2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift */; };
 		FED5E9E32C49864B00F72C95 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E22C49864B00F72C95 /* Config.swift */; };
 		FED5E9E52C49866A00F72C95 /* ConfigExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E42C49866A00F72C95 /* ConfigExample.swift */; };
 		FED5E9E72C49867600F72C95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E62C49867600F72C95 /* User.swift */; };
@@ -40,6 +44,8 @@
 		3799336ED2C5BE62AC5AF0DB /* Pods_BasicNoteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicNoteApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8044875D1927527B4155225D /* Pods-BasicNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicNoteApp.release.xcconfig"; path = "Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp.release.xcconfig"; sourceTree = "<group>"; };
 		F0B478FB940B4BB00B7F1FA2 /* Pods-BasicNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicNoteApp.debug.xcconfig"; path = "Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FE24B3442C4E90820024C9F7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		FE24B3462C4EBDAD0024C9F7 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
@@ -52,6 +58,8 @@
 		FE9652062C4C6713006B9E50 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 		FE9652092C4C904E006B9E50 /* AddNoteScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteScreenViewController.swift; sourceTree = "<group>"; };
 		FE96520B2C4C9184006B9E50 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		FEA20F6B2C4E8DB100D401FE /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
+		FEA20F6D2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeScreenViewController.swift; sourceTree = "<group>"; };
 		FED5E9E22C49864B00F72C95 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FED5E9E42C49866A00F72C95 /* ConfigExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigExample.swift; sourceTree = "<group>"; };
 		FED5E9E62C49867600F72C95 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -139,6 +147,7 @@
 				FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */,
 				FE725EEC2C4AEA2D00FA2032 /* UserResponse.swift */,
 				FE725EEE2C4AEE7500FA2032 /* NoteResponse.swift */,
+				FE24B3462C4EBDAD0024C9F7 /* ErrorResponse.swift */,
 			);
 			path = ResponceModels;
 			sourceTree = "<group>";
@@ -155,6 +164,7 @@
 		FE760B1C2C3697660055E53F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FE725EE82C4A86DB00FA2032 /* Helper */,
 				FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */,
 				FEE75E092C32AC0400F39397 /* AppDelegate.swift */,
 				FE760B222C3699DC0055E53F /* Extensions */,
@@ -178,6 +188,8 @@
 		FE760B1E2C3697880055E53F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FEA20F6F2C4E8E2000D401FE /* ChangePasswordScreen */,
+				FEA20F6A2C4E8D9900D401FE /* ProfileScreen */,
 				FE9652082C4C902E006B9E50 /* AddNoteScreen */,
 				FE9652052C4C66D7006B9E50 /* EditNoteScreen */,
 				FE7548972C4B2CD900362778 /* NotesScreen */,
@@ -246,6 +258,22 @@
 			path = AddNoteScreen;
 			sourceTree = "<group>";
 		};
+		FEA20F6A2C4E8D9900D401FE /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FEA20F6B2C4E8DB100D401FE /* ProfileScreenViewController.swift */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		FEA20F6F2C4E8E2000D401FE /* ChangePasswordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FEA20F6D2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift */,
+			);
+			path = ChangePasswordScreen;
+			sourceTree = "<group>";
+		};
 		FED5E9EC2C49EB2000F72C95 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +288,7 @@
 			children = (
 				FED5E9F32C49ECB000F72C95 /* AuthService.swift */,
 				FED5E9F52C49ECC000F72C95 /* NoteService.swift */,
+				FE24B3442C4E90820024C9F7 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -285,7 +314,6 @@
 		FEE75E082C32AC0400F39397 /* BasicNoteApp */ = {
 			isa = PBXGroup;
 			children = (
-				FE725EE82C4A86DB00FA2032 /* Helper */,
 				FED5E9E42C49866A00F72C95 /* ConfigExample.swift */,
 				FED5E9E22C49864B00F72C95 /* Config.swift */,
 				FEE75E0F2C32AC0400F39397 /* Main.storyboard */,
@@ -416,6 +444,7 @@
 				FE9652042C4C2C03006B9E50 /* NoteViewCell.swift in Sources */,
 				FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */,
 				FE96520C2C4C9184006B9E50 /* NoteModel.swift in Sources */,
+				FE24B3452C4E90820024C9F7 /* UserService.swift in Sources */,
 				FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */,
 				FEE75E0E2C32AC0400F39397 /* RegisterViewController.swift in Sources */,
 				FE8FF9B02C3DDB8600A19C03 /* Extensions+UITextField.swift in Sources */,
@@ -430,7 +459,10 @@
 				FEE75E0A2C32AC0400F39397 /* AppDelegate.swift in Sources */,
 				FED5E9EB2C49E02900F72C95 /* Extension+UIViewController.swift in Sources */,
 				FED5E9E72C49867600F72C95 /* User.swift in Sources */,
+				FEA20F6E2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift in Sources */,
+				FEA20F6C2C4E8DB100D401FE /* ProfileScreenViewController.swift in Sources */,
 				FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */,
+				FE24B3472C4EBDAD0024C9F7 /* ErrorResponse.swift in Sources */,
 				FE725EEB2C4AE9F800FA2032 /* AuthResponse.swift in Sources */,
 				FED5E9F42C49ECB000F72C95 /* AuthService.swift in Sources */,
 			);

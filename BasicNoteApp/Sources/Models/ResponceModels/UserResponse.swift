@@ -18,3 +18,15 @@ struct UserData: Codable {
     let full_name: String
     let email: String
 }
+
+struct UserUpdatedResponse: Codable {
+    let code: String
+    let data: UserData
+    let message: String
+}
+
+struct UserPasswordChangeResponse: Codable {
+    let code: String
+    let data: String
+    let message: String
+}

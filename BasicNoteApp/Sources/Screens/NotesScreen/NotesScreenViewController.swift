@@ -10,6 +10,7 @@ import UIKit
 
 class NotesScreenViewController: UIViewController {
     
+    @IBOutlet var searchBar: UISearchBar!
     let noteService = NoteService()
     var noteTakenSucces: (([Note]) -> Void)?
     var noteTakenFailure: ((Error) -> Void)?
@@ -18,12 +19,12 @@ class NotesScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackButtonTitle()
+        setBackButtonTitle(isHideNavBar: false)
         noteTakenSucces = { data in
             self.notesArray = data
             self.notesTable.reloadData()
         }
-        
+        self.navigationItem.titleView = searchBar
         notesTable.delegate = self
         notesTable.dataSource = self
         getAllNotes()
@@ -32,7 +33,8 @@ class NotesScreenViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setBackButtonTitle()
+        setBackButtonTitle(isHideNavBar: false)
+        self.navigationItem.hidesBackButton = true
         getAllNotes()
     }
     
@@ -47,6 +49,7 @@ class NotesScreenViewController: UIViewController {
             }
         }
     }
+
 }
 
 // Actions
@@ -54,6 +57,10 @@ extension NotesScreenViewController {
     @IBAction func showAddNotePage(_ sender: Any) {
       performSegue(withIdentifier: "showAddNotePage", sender: nil)
     }
+    @IBAction func goProfilePage(_ sender: Any) {
+        performSegue(withIdentifier: "goProfilePage", sender: nil)
+    }
+    
 }
 
 // Table View
