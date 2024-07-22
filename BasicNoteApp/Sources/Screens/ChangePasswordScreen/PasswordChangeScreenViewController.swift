@@ -13,17 +13,29 @@ class PasswordChangeScreenViewController: UIViewController {
     @IBOutlet var new_password: UITextField!
     @IBOutlet var re_new_password: UITextField!
     @IBOutlet var saveButton: UIButton!
+    @IBOutlet var errorImage: UIImageView!
+    @IBOutlet var errorMessage: UILabel!
     let userService = UserService()
     var initialPassword: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialDesign()
         checkIsShouldEnabledSaveChangesButton()
         password.delegate = self
         new_password.delegate = self
         re_new_password.delegate = self
 
     }
+    
+    private func initialDesign() {
+        password.initialDesign()
+        new_password.initialDesign()
+        re_new_password.initialDesign()
+        errorImage.isHidden = true
+        errorImage.isHidden = true
+    }
+    
     
     private func checkIsShouldEnabledSaveChangesButton () {
         if (password.text == "" || new_password.text == "" || re_new_password.text == "") {
@@ -40,21 +52,27 @@ class PasswordChangeScreenViewController: UIViewController {
 // Actions
 extension PasswordChangeScreenViewController {
     @IBAction private func changePassword(_ sender: Any) {
+        initialDesign()
+        
         let changePasswordStruct = ChangePassword(password: password.text!, new_password: new_password.text!, new_password_confirmation: re_new_password.text!)
         
-        if passwordMatchCheck(password: new_password, rePassword: re_new_password) {
-            userService.changePassword(changePasswordStruct: changePasswordStruct) { result in
-                switch result {
-                case .success(let response):
-                    print("Password changed successfully: \(response)")
-                case .failure(let error):
-                    print("Error occurred: \(error.localizedDescription)")
-                }
+        userService.changePassword(changePasswordStruct: changePasswordStruct) { result in
+            switch result {
+            case .success(let response):
+                print("Password changed successfully: \(response)")
+            case .failure(let error):
+                self.password.showInvalidFunctionError()
+                self.new_password.showInvalidFunctionError()
+                self.re_new_password.showInvalidFunctionError()
+                self.errorImage.isHidden = false
+                self.errorMessage.text = error.localizedDescription
+                self.errorMessage.isHidden = false
             }
-        }  else {
-            new_password.showInvalidFunctionError(message: "Password must match")
-            re_new_password.showInvalidFunctionError(message: "Password must match")
         }
+    }
+    
+    @IBAction private func turnBack() {
+        navigationController?.popViewController(animated: true)
     }
 }
 

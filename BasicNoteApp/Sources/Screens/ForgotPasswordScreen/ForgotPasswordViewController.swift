@@ -31,7 +31,7 @@ extension ForgotPasswordViewController {
     @IBAction private func resetPassword(_ sender: Any) {
         // reset password
         if !emailAdressLabel.isValidEmail(email: emailAdressLabel.text!) {
-            emailAdressLabel.showInvalidFunctionError(message: "Your email address should contain @.")
+            emailAdressLabel.showInvalidFunctionError()
         }
     }
 }

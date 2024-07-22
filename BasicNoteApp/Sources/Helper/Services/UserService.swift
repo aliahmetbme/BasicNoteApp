@@ -9,14 +9,14 @@ import Foundation
 import Alamofire
 
 class UserService {
-    func getCurrentUser(completion: @escaping ((Result<CurrentUserResponse, Error>) -> Void)) {
+    func getCurrentUser(completion: @escaping ((Result<CurrentUserResponse, NetworkError>) -> Void)) {
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
         let headers : HTTPHeaders = ["Authorization":"Bearer \(token)" ]
         
         NetworkManager.shared.request(.me, method: .get, headers: headers,completion: completion)
     }
     
-    func updateCurrentUser(currentUser: UserUpdate, completion: @escaping ((Result<UserUpdatedResponse, Error>) -> Void)){
+    func updateCurrentUser(currentUser: UserUpdate, completion: @escaping ((Result<UserUpdatedResponse, NetworkError>) -> Void)){
         let parameters = ["full_name": currentUser.full_name, "email": currentUser.email]
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
         let headers : HTTPHeaders = ["Authorization":"Bearer \(token)" ]
@@ -30,7 +30,7 @@ class UserService {
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
         let headers : HTTPHeaders = ["Authorization":"Bearer \(token)" ]
                 
-        NetworkManager.shared.Request(.updatepassword, method: .put, parameters: parameters , headers: headers, completion: completion)
+        NetworkManager.shared.request(.updatepassword, method: .put, parameters: parameters , headers: headers, completion: completion)
         
     }
 }

@@ -11,11 +11,14 @@ class ProfileScreenViewController: UIViewController {
 
     @IBOutlet var fullname_Label: UITextField!
     @IBOutlet var emailAdressLabel: UITextField!
+    @IBOutlet var errorImage: UIImageView!
+    @IBOutlet var errorMessage: UILabel!
     var password = ""
     let userService = UserService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialDesign()
         userService.getCurrentUser { [self] result in
             switch result {
             case .success(let response):
@@ -25,6 +28,13 @@ class ProfileScreenViewController: UIViewController {
                 print(error)
             }
         }
+    }
+    
+    private func initialDesign() {
+        fullname_Label.initialDesign()
+        emailAdressLabel.initialDesign()
+        errorImage.isHidden = true
+        errorImage.isHidden = true
     }
     
 
@@ -49,7 +59,6 @@ extension ProfileScreenViewController {
     @IBAction func signOut(_ sender: Any) {
         UserDefaults.standard.removeObject(forKey: "accesToken")
         performSegue(withIdentifier: "signout", sender: nil)
-        navigationController?.popToRootViewController(animated: false)
     }
     
     @IBAction func goChangePasswordPage(_ sender: Any) {
@@ -57,13 +66,20 @@ extension ProfileScreenViewController {
     }
     
     @IBAction func saveChanges(_ sender: Any) {
+        initialDesign()
+        
         let currentUser = UserUpdate(full_name: fullname_Label.text!, email: emailAdressLabel.text!)
+        
         userService.updateCurrentUser(currentUser: currentUser) { result in
             switch result {
             case .success(_):
                 print("Succesfully Updated")
-            case .failure(_):
-                print("Error")
+            case .failure(let error):
+                self.fullname_Label.showInvalidFunctionError()
+                self.emailAdressLabel.showInvalidFunctionError()
+                self.errorImage.isHidden = false
+                self.errorMessage.text = error.localizedDescription
+                self.errorMessage.isHidden = false
             }
         }
     }

@@ -12,13 +12,12 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
 
-    func Request<T: Decodable>(_ endpoint: APIEndpoint, method: HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    func request<T: Decodable>(_ endpoint: APIEndpoint, method: HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, completion: @escaping (Result<T, NetworkError>) -> Void) {
         
         guard let url = URL(string: endpoint.urlString) else {
             completion(.failure(.invalidURL))
             return
         }
-        print(url)
         
         // Set encoding based on HTTP method
         let encoding: ParameterEncoding
@@ -62,7 +61,7 @@ class NetworkManager {
     }
 
     
-   func request<T: Decodable>(_ endpoint: APIEndpoint, method: HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil,completion: @escaping (Result<T, Error>) -> Void) {
+   func Request<T: Decodable>(_ endpoint: APIEndpoint, method: HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil,completion: @escaping (Result<T, Error>) -> Void) {
         
         guard let url = URL(string: endpoint.urlString) else {
             completion(.failure(NetworkError.invalidURL))

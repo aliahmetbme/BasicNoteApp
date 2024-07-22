@@ -23,7 +23,6 @@ enum APIEndpoint {
     var urlString: String {
         switch self {
         case .login:
-            print("Api: \(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.login)")
             return "https://basicnoteapp.mobillium.com/api/auth/login"
         case .register:
             return "https://basicnoteapp.mobillium.com/api/auth/register"

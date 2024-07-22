@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class NoteService {
-    func createNote(title: String, note: String, completion: @escaping (Result<NoteResponseModel, Error>) -> Void) {
+    func createNote(title: String, note: String, completion: @escaping (Result<NoteResponseModel, NetworkError>) -> Void) {
         let parameters: Parameters = [
             "title": title,
             "note": note
@@ -18,7 +18,7 @@ class NoteService {
         NetworkManager.shared.request(.createNote, method: .post, parameters: parameters, completion: completion)
     }
     
-    func deleteNote(note_id: Int, completion: @escaping (Result<DeletedNote, Error>) -> Void) {
+    func deleteNote(note_id: Int, completion: @escaping (Result<DeletedNote, NetworkError>) -> Void) {
         let parameters: Parameters = [":note_id": note_id]
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
         let headers : HTTPHeaders = ["Authorization":"Bearer \(token)" ]
@@ -26,7 +26,7 @@ class NoteService {
         NetworkManager.shared.request(.deleteNote(note_id: note_id), method: .delete, parameters: parameters ,headers: headers, completion: completion)
     }
         
-    func getAllNotes(page: Int = 1, completion: @escaping (Result<NoteResponseModel, Error>) -> Void) {
+    func getAllNotes(page: Int = 1, completion: @escaping (Result<NoteResponseModel, NetworkError>) -> Void) {
         
         let parameters: Parameters = ["page": page]
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
@@ -36,7 +36,7 @@ class NoteService {
         
     }
     
-    func getSpecificNote(note_id: Int, completion: @escaping ((Result<SpecificNoteResponseModel, Error>) -> Void)) {
+    func getSpecificNote(note_id: Int, completion: @escaping ((Result<SpecificNoteResponseModel, NetworkError>) -> Void)) {
         let parameters: Parameters = ["note_id": note_id ]
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
         let headers : HTTPHeaders = ["Authorization": "Bearer \(token)" ]
@@ -44,7 +44,7 @@ class NoteService {
         NetworkManager.shared.request(.getNote(note_id: note_id), method: .get,parameters: parameters ,headers: headers,completion: completion)
     }
     
-    func updateNote(note: Note, completion: @escaping ((Result<SpecificNoteResponseModel, Error>) -> Void)) {
+    func updateNote(note: Note, completion: @escaping ((Result<SpecificNoteResponseModel, NetworkError>) -> Void)) {
         let parameters: Parameters = ["note_id": note.id, "title": note.title, "note": note.note]
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
         let headers : HTTPHeaders = ["Authorization": "Bearer \(token)" ]
@@ -52,7 +52,7 @@ class NoteService {
         NetworkManager.shared.request(.updateNote(note_id: note.id), method: .put,parameters: parameters ,headers: headers,completion: completion)
     }
     
-    func createNote(note: UploadNoteModel, completion: @escaping ((Result<AddNoteResponseModel, Error>) -> Void)) {
+    func createNote(note: UploadNoteModel, completion: @escaping ((Result<AddNoteResponseModel, NetworkError>) -> Void)) {
         let parameters: Parameters = ["title": note.title, "note": note.note]
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
         let headers : HTTPHeaders = ["Authorization": "Bearer \(token)" ]

@@ -15,6 +15,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet private var passwordLabel: UITextField!
     @IBOutlet private var registerButton: UIButton!
     @IBOutlet private var loginButton: UIButton!
+    @IBOutlet var errorMessage: UILabel!
+    @IBOutlet var errorImage: UIImageView!
+    
     let authService = AuthService()
     
     override func viewDidLoad() {
@@ -23,14 +26,16 @@ class RegisterViewController: UIViewController {
     }
     
     private func initalDesign () {
-        
+        navigationController?.isNavigationBarHidden = true
         fullNameLabel.initialDesign()
         emailAdressLabel.initialDesign()
         passwordLabel.initialDesign()
         registerButton.disabledDesign()
         setBackButtonTitle()
+        self.errorImage.isHidden = true
+        self.errorMessage.isHidden = true
         loginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
-        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
@@ -41,6 +46,7 @@ class RegisterViewController: UIViewController {
 extension RegisterViewController {
     
     @IBAction private func register(_ sender: Any) {
+        initalDesign()
         let user = UserRegister(password: passwordLabel.text! , email: emailAdressLabel.text! , full_name: fullNameLabel.text!)
         
         authService.register(user: user) { result in
@@ -49,7 +55,12 @@ extension RegisterViewController {
                 print(response)
                 self.performSegue(withIdentifier: "goLoginPage", sender: nil)
             case .failure(let error):
-                print(error)
+                self.emailAdressLabel.showInvalidFunctionError()
+                self.fullNameLabel.showInvalidFunctionError()
+                self.passwordLabel.showInvalidFunctionError()
+                self.errorImage.isHidden = false
+                self.errorMessage.text = error.localizedDescription
+                self.errorMessage.isHidden = false
             }
         }
     }
