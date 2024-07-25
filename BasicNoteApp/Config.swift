@@ -14,4 +14,6 @@ struct ApiBaseUrlConfig {
 struct RequestTypeConfig {
     static let login = "auth/login"
     static let register = "auth/register"
+    static let deleteNote = "notes/"
+    static let getNote = "notes/"
 }

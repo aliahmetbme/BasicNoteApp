@@ -10,32 +10,32 @@ import Alamofire
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet private var fullNameLabel: UITextField!
-    @IBOutlet private var emailAdressLabel: UITextField!
-    @IBOutlet private var passwordLabel: UITextField!
-    @IBOutlet private var registerButton: UIButton!
-    @IBOutlet private var loginButton: UIButton!
+    @IBOutlet private var FullNameField: UITextField!
+    @IBOutlet private var EmailAdressField: UITextField!
+    @IBOutlet private var PasswordField: UITextField!
+    @IBOutlet private var RegisterButton: UIButton!
+    @IBOutlet private var LoginButton: UIButton!
+    @IBOutlet var ErrorMessage: UILabel!
+    @IBOutlet var ErrorImage: UIImageView!
     
+    let authService = AuthService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initalDesign()
     }
-    
-    private func initalDesign () {
-        
-        fullNameLabel.initialDesign()
-        emailAdressLabel.initialDesign()
-        passwordLabel.initialDesign()
-        registerButton.disabledDesign()
-
-        loginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
-    
-        setBackButtonItemTitle(title: "")
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+        initalDesign()
+    }
+    private func initalDesign() {
+        FullNameField.initialDesign()
+        EmailAdressField.initialDesign()
+        PasswordField.initialDesign()
+        RegisterButton.disabledDesign()
+        setBackButtonTitle()
+        self.ErrorImage.isHidden = true
+        self.ErrorMessage.isHidden = true
+        LoginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
     }
 }
 
@@ -43,26 +43,28 @@ class RegisterViewController: UIViewController {
 extension RegisterViewController {
     
     @IBAction private func register(_ sender: Any) {
-        let parameters = UserRegister(password: passwordLabel.text! , email: emailAdressLabel.text! , full_name: fullNameLabel.text!)
+        initalDesign()
+        let user = UserRegister(password: PasswordField.text! , email: EmailAdressField.text! , fullName: FullNameField.text!)
         
-        AF.request("\(ApiBaseUrlConfig.apiBaseUrl)\(RequestTypeConfig.register)", method: .post, parameters: parameters, encoder: JSONParameterEncoder.default).response {response in
-            
-            if let data = response.data {
-                do {
-                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
-                        print(json)
-                    }
-                } catch {
-                    print("error")
-                    print(error.localizedDescription)
-                }
+        authService.register(user: user) { result in
+            switch result {
+            case .success(let response):
+                print(response)
+                self.performSegue(withIdentifier: "goLoginPage", sender: nil)
+            case .failure(let error):
+                self.EmailAdressField.showInvalidFunctionError()
+                self.FullNameField.showInvalidFunctionError()
+                self.PasswordField.showInvalidFunctionError()
+                self.ErrorImage.isHidden = false
+                self.ErrorMessage.text = error.localizedDescription
+                self.ErrorMessage.isHidden = false
             }
         }
     }
     
     @IBAction private func goLoginPage(_ sender: Any) {
         performSegue(withIdentifier: "goLoginPage", sender: nil)
-        print(emailAdressLabel.isValidEmail(email: emailAdressLabel.text!))
+        print(EmailAdressField.isValidEmail(email: EmailAdressField.text!))
 
     }
 }
