@@ -21,7 +21,7 @@ class AuthService {
     func register(user: UserRegister, completion: @escaping (Result<RegisterResponse, NetworkError>) -> Void) {
         let parameters: Parameters = [
             "email": user.email,
-            "full_name": user.full_name,
+            "full_name": user.fullName,
             "password": user.password
         ]
         

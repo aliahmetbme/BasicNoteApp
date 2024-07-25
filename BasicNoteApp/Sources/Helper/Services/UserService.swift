@@ -17,7 +17,7 @@ class UserService {
     }
     
     func updateCurrentUser(currentUser: UserUpdate, completion: @escaping ((Result<UserUpdatedResponse, NetworkError>) -> Void)){
-        let parameters = ["full_name": currentUser.full_name, "email": currentUser.email]
+        let parameters = ["full_name": currentUser.fullName, "email": currentUser.email]
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
         let headers : HTTPHeaders = ["Authorization":"Bearer \(token)" ]
         
@@ -25,7 +25,7 @@ class UserService {
 
     }
     func changePassword(changePasswordStruct: ChangePassword, completion: @escaping ((Result<UserPasswordChangeResponse, NetworkError>) -> Void)){
-        let parameters = ["password": changePasswordStruct.password, "new_password": changePasswordStruct.new_password, "new_password_confirmation": changePasswordStruct.new_password_confirmation]
+        let parameters = ["password": changePasswordStruct.password, "new_password": changePasswordStruct.newPassword, "new_password_confirmation": changePasswordStruct.newPasswordConfirmation]
         
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
         let headers : HTTPHeaders = ["Authorization":"Bearer \(token)" ]

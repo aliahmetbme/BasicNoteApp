@@ -10,7 +10,13 @@ import Foundation
 struct UserRegister: Codable {
     let password: String
     let email: String
-    let full_name: String
+    let fullName: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case password = "password"
+        case email = "email"
+        case fullName = "full_name"
+    }
 }
 
 struct UserLogin: Codable {
@@ -19,8 +25,13 @@ struct UserLogin: Codable {
 }
 
 struct UserUpdate: Codable {
-    let full_name: String
+    let fullName: String
     let email: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case fullName = "full_name"
+        case email = "email"
+    }
 }
 
 struct UserPasswordForgot: Codable {
@@ -29,7 +40,13 @@ struct UserPasswordForgot: Codable {
 
 struct ChangePassword: Codable {
     let password: String
-    let new_password: String
-    let new_password_confirmation: String
+    let newPassword: String
+    let newPasswordConfirmation: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case password = "password"
+        case newPassword = "new_password"
+        case newPasswordConfirmation = "new_password_confirmation"
+    }
 }
 

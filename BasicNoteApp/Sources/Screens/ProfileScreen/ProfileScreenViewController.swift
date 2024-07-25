@@ -66,7 +66,7 @@ extension ProfileScreenViewController {
     @IBAction func saveChanges(_ sender: Any) {
         initialDesign()
         
-        let currentUser = UserUpdate(full_name: FullNameField.text!, email: EmailAdressField.text!)
+        let currentUser = UserUpdate(fullName: FullNameField.text!, email: EmailAdressField.text!)
         
         userService.updateCurrentUser(currentUser: currentUser) { result in
             switch result {

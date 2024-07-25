@@ -54,7 +54,7 @@ extension PasswordChangeScreenViewController {
     @IBAction private func changePassword(_ sender: Any) {
         initialDesign()
         
-        let changePasswordStruct = ChangePassword(password: Password.text!, new_password: NewPassword.text!, new_password_confirmation: ReNewPassword.text!)
+        let changePasswordStruct = ChangePassword(password: Password.text!, newPassword: NewPassword.text!, newPasswordConfirmation: ReNewPassword.text!)
         
         userService.changePassword(changePasswordStruct: changePasswordStruct) { result in
             switch result {

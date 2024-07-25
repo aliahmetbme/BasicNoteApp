@@ -44,7 +44,7 @@ extension RegisterViewController {
     
     @IBAction private func register(_ sender: Any) {
         initalDesign()
-        let user = UserRegister(password: PasswordField.text! , email: EmailAdressField.text! , full_name: FullNameField.text!)
+        let user = UserRegister(password: PasswordField.text! , email: EmailAdressField.text! , fullName: FullNameField.text!)
         
         authService.register(user: user) { result in
             switch result {

@@ -17,13 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        if let token = UserDefaults.standard.value(forKey: "accesToken") {
+        if UserDefaults.standard.value(forKey: "accesToken") != nil {
             guard let windowScene = (scene as? UIWindowScene) else { return }
             let window = UIWindow(windowScene: windowScene)
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
-            // İlk açılacak ViewController'ın storyboardID'sini belirtin
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "NotesScreenViewController")
             let navigationController = UINavigationController(rootViewController: initialViewController)
             

@@ -10,8 +10,8 @@ import UIKit
 
 class NotesScreenViewController: UIViewController {
     
-    @IBOutlet var SearchBar: UISearchBar!
-    @IBOutlet var NotesTable: UITableView!
+    @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var notesTable: UITableView!
     
     let noteService = NoteService()
     var notesArray: [Note] = []
@@ -28,20 +28,20 @@ class NotesScreenViewController: UIViewController {
     
     private func initialSettings () {
         
-        NotesTable.delegate = self
-        NotesTable.dataSource = self
+        notesTable.delegate = self
+        notesTable.dataSource = self
         
         setBackButtonTitle(isHideNavBar: false)
         getAllNotes()
 
-        self.navigationItem.titleView = SearchBar
+        self.navigationItem.titleView = searchBar
         self.navigationItem.hidesBackButton = true
     }
     
     private func noteTakenSucces(data: [Note]) {
         
         self.notesArray = data
-        self.NotesTable.reloadData()
+        self.notesTable.reloadData()
     }
     
     private func noteTakenFailure(error: Error) {
@@ -96,10 +96,10 @@ extension NotesScreenViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let note = notesArray[indexPath.row]
-        let cell = NotesTable.dequeueReusableCell(withIdentifier: "notecell", for: indexPath) as! NoteViewCell
+        let cell = notesTable.dequeueReusableCell(withIdentifier: "notecell", for: indexPath) as! NoteViewCell
         
-        cell.Note.text = note.note
-        cell.Title.text = note.title
+        cell.note.text = note.note
+        cell.title.text = note.title
         
         return cell
     }

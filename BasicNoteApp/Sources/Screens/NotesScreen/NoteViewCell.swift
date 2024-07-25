@@ -9,8 +9,8 @@ import UIKit
 
 class NoteViewCell: UITableViewCell {
 
-    @IBOutlet var Title: UILabel!
-    @IBOutlet var Note: UILabel!
+    @IBOutlet var title: UILabel!
+    @IBOutlet var note: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -506,8 +506,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="Note" destination="ipI-JC-7sM" id="2S2-bl-M7L"/>
-                                            <outlet property="Title" destination="XF8-Lb-76S" id="VVH-m4-hvX"/>
+                                            <outlet property="note" destination="ipI-JC-7sM" id="2S2-bl-M7L"/>
+                                            <outlet property="title" destination="XF8-Lb-76S" id="VVH-m4-hvX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -560,8 +560,8 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="NotesTable" destination="rFQ-kz-L8L" id="bhP-At-Pt7"/>
-                        <outlet property="SearchBar" destination="0sK-zZ-71A" id="5Ce-9L-iCw"/>
+                        <outlet property="notesTable" destination="rFQ-kz-L8L" id="bhP-At-Pt7"/>
+                        <outlet property="searchBar" destination="0sK-zZ-71A" id="5Ce-9L-iCw"/>
                         <segue destination="3Bk-Nx-GpS" kind="show" identifier="goEditNoteVC" id="c6J-Fc-DRW"/>
                         <segue destination="bqe-cr-7nm" kind="presentation" identifier="showAddNotePage" id="FC0-ay-k1j"/>
                         <segue destination="QDX-iU-sGa" kind="show" identifier="goProfilePage" id="xAF-Cr-i1L"/>
