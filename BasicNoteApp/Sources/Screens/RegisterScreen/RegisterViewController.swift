@@ -10,13 +10,13 @@ import Alamofire
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet private var fullNameLabel: UITextField!
-    @IBOutlet private var emailAdressLabel: UITextField!
-    @IBOutlet private var passwordLabel: UITextField!
-    @IBOutlet private var registerButton: UIButton!
-    @IBOutlet private var loginButton: UIButton!
-    @IBOutlet var errorMessage: UILabel!
-    @IBOutlet var errorImage: UIImageView!
+    @IBOutlet private var FullNameField: UITextField!
+    @IBOutlet private var EmailAdressField: UITextField!
+    @IBOutlet private var PasswordField: UITextField!
+    @IBOutlet private var RegisterButton: UIButton!
+    @IBOutlet private var LoginButton: UIButton!
+    @IBOutlet var ErrorMessage: UILabel!
+    @IBOutlet var ErrorImage: UIImageView!
     
     let authService = AuthService()
     
@@ -24,21 +24,18 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         initalDesign()
     }
-    
-    private func initalDesign () {
-        navigationController?.isNavigationBarHidden = true
-        fullNameLabel.initialDesign()
-        emailAdressLabel.initialDesign()
-        passwordLabel.initialDesign()
-        registerButton.disabledDesign()
-        setBackButtonTitle()
-        self.errorImage.isHidden = true
-        self.errorMessage.isHidden = true
-        loginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+        initalDesign()
+    }
+    private func initalDesign() {
+        FullNameField.initialDesign()
+        EmailAdressField.initialDesign()
+        PasswordField.initialDesign()
+        RegisterButton.disabledDesign()
+        setBackButtonTitle()
+        self.ErrorImage.isHidden = true
+        self.ErrorMessage.isHidden = true
+        LoginButton.setAttributedTitle(part1: "Already have Account?", color1: UIColor.black, part2: " Sign in now", color2: UIColor.signuptext, for: .normal)
     }
 }
 
@@ -47,7 +44,7 @@ extension RegisterViewController {
     
     @IBAction private func register(_ sender: Any) {
         initalDesign()
-        let user = UserRegister(password: passwordLabel.text! , email: emailAdressLabel.text! , full_name: fullNameLabel.text!)
+        let user = UserRegister(password: PasswordField.text! , email: EmailAdressField.text! , full_name: FullNameField.text!)
         
         authService.register(user: user) { result in
             switch result {
@@ -55,19 +52,19 @@ extension RegisterViewController {
                 print(response)
                 self.performSegue(withIdentifier: "goLoginPage", sender: nil)
             case .failure(let error):
-                self.emailAdressLabel.showInvalidFunctionError()
-                self.fullNameLabel.showInvalidFunctionError()
-                self.passwordLabel.showInvalidFunctionError()
-                self.errorImage.isHidden = false
-                self.errorMessage.text = error.localizedDescription
-                self.errorMessage.isHidden = false
+                self.EmailAdressField.showInvalidFunctionError()
+                self.FullNameField.showInvalidFunctionError()
+                self.PasswordField.showInvalidFunctionError()
+                self.ErrorImage.isHidden = false
+                self.ErrorMessage.text = error.localizedDescription
+                self.ErrorMessage.isHidden = false
             }
         }
     }
     
     @IBAction private func goLoginPage(_ sender: Any) {
         performSegue(withIdentifier: "goLoginPage", sender: nil)
-        print(emailAdressLabel.isValidEmail(email: emailAdressLabel.text!))
+        print(EmailAdressField.isValidEmail(email: EmailAdressField.text!))
 
     }
 }

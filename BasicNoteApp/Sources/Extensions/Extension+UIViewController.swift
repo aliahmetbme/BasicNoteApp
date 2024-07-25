@@ -15,9 +15,4 @@ extension UIViewController {
         self.navigationItem.backBarButtonItem = backButton
         navigationController?.setNavigationBarHidden(isHideNavBar, animated: true)
     }
-    
-    func passwordMatchCheck(password: UITextField, rePassword: UITextField) -> Bool {
-        if (password.text == "" || rePassword.text == "") {return false}
-        return (password.text == rePassword.text)
-    }
 }

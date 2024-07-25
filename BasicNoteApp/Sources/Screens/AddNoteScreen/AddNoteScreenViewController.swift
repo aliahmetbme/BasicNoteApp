@@ -9,8 +9,8 @@ import UIKit
 
 class AddNoteScreenViewController: UIViewController {
 
-    @IBOutlet var note_title: UITextView!
-    @IBOutlet var note_description: UITextView!
+    @IBOutlet var NoteTitle: UITextView!
+    @IBOutlet var NoteDescription: UITextView!
     let noteService = NoteService()
     var onDismiss: (() -> Void)?
 
@@ -21,7 +21,7 @@ class AddNoteScreenViewController: UIViewController {
     
     
     @IBAction func addNote(_ sender: Any) {
-        let new_note = UploadNoteModel(title: note_title.text!, note: note_description.text!)
+        let new_note = UploadNoteModel(title: NoteTitle.text!, note: NoteDescription.text!)
         noteService.createNote(note: new_note) { result in
             switch result {
             case .success(let response):

@@ -9,10 +9,11 @@ import UIKit
 
 class ProfileScreenViewController: UIViewController {
 
-    @IBOutlet var fullname_Label: UITextField!
-    @IBOutlet var emailAdressLabel: UITextField!
-    @IBOutlet var errorImage: UIImageView!
-    @IBOutlet var errorMessage: UILabel!
+    @IBOutlet var FullNameField: UITextField!
+    @IBOutlet var EmailAdressField: UITextField!
+    @IBOutlet var ErrorImage: UIImageView!
+    @IBOutlet var ErrorMessage: UILabel!
+    
     var password = ""
     let userService = UserService()
     
@@ -22,8 +23,8 @@ class ProfileScreenViewController: UIViewController {
         userService.getCurrentUser { [self] result in
             switch result {
             case .success(let response):
-                fullname_Label.text = response.data.full_name
-                emailAdressLabel.text = response.data.email
+                FullNameField.text = response.data.full_name
+                EmailAdressField.text = response.data.email
             case .failure(let error):
                 print(error)
             }
@@ -31,14 +32,11 @@ class ProfileScreenViewController: UIViewController {
     }
     
     private func initialDesign() {
-        fullname_Label.initialDesign()
-        emailAdressLabel.initialDesign()
-        errorImage.isHidden = true
-        errorImage.isHidden = true
+        FullNameField.initialDesign()
+        EmailAdressField.initialDesign()
+        ErrorImage.isHidden = true
+        ErrorImage.isHidden = true
     }
-    
-
-    
 }
 
 // Actions
@@ -68,18 +66,18 @@ extension ProfileScreenViewController {
     @IBAction func saveChanges(_ sender: Any) {
         initialDesign()
         
-        let currentUser = UserUpdate(full_name: fullname_Label.text!, email: emailAdressLabel.text!)
+        let currentUser = UserUpdate(full_name: FullNameField.text!, email: EmailAdressField.text!)
         
         userService.updateCurrentUser(currentUser: currentUser) { result in
             switch result {
             case .success(_):
                 print("Succesfully Updated")
             case .failure(let error):
-                self.fullname_Label.showInvalidFunctionError()
-                self.emailAdressLabel.showInvalidFunctionError()
-                self.errorImage.isHidden = false
-                self.errorMessage.text = error.localizedDescription
-                self.errorMessage.isHidden = false
+                self.FullNameField.showInvalidFunctionError()
+                self.EmailAdressField.showInvalidFunctionError()
+                self.ErrorImage.isHidden = false
+                self.ErrorMessage.text = error.localizedDescription
+                self.ErrorMessage.isHidden = false
             }
         }
     }

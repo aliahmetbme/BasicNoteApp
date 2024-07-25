@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="ypT-rB-Ogn" customClass="RegisterViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uZH-uF-TNa">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgP-4e-qOl">
@@ -134,13 +134,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Hgr-WV-gdP"/>
                     <connections>
-                        <outlet property="emailAdressLabel" destination="tPQ-qR-pdj" id="Oy2-rK-SXr"/>
-                        <outlet property="errorImage" destination="Rwk-kY-MTe" id="0EU-rc-vh1"/>
-                        <outlet property="errorMessage" destination="Hpb-Pv-zWA" id="6ZE-Qp-0KO"/>
-                        <outlet property="fullNameLabel" destination="rFS-rO-wox" id="sFu-wa-Xzv"/>
-                        <outlet property="loginButton" destination="DLh-iC-xiN" id="cx3-jK-4bF"/>
-                        <outlet property="passwordLabel" destination="5jm-Us-avC" id="EV3-az-xxd"/>
-                        <outlet property="registerButton" destination="hZA-1w-umG" id="wAQ-eG-kze"/>
+                        <outlet property="EmailAdressField" destination="tPQ-qR-pdj" id="Oy2-rK-SXr"/>
+                        <outlet property="ErrorImage" destination="Rwk-kY-MTe" id="0EU-rc-vh1"/>
+                        <outlet property="ErrorMessage" destination="Hpb-Pv-zWA" id="6ZE-Qp-0KO"/>
+                        <outlet property="FullNameField" destination="rFS-rO-wox" id="sFu-wa-Xzv"/>
+                        <outlet property="LoginButton" destination="DLh-iC-xiN" id="cx3-jK-4bF"/>
+                        <outlet property="PasswordField" destination="5jm-Us-avC" id="EV3-az-xxd"/>
+                        <outlet property="RegisterButton" destination="hZA-1w-umG" id="wAQ-eG-kze"/>
                         <segue destination="fiT-39-q44" kind="show" identifier="goLoginPage" id="vl6-Cc-abc"/>
                     </connections>
                 </viewController>
@@ -153,7 +153,7 @@
             <objects>
                 <viewController id="fiT-39-q44" customClass="LoginViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iix-t5-yFx">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLY-Ig-HzH">
@@ -341,7 +341,7 @@
             <objects>
                 <viewController id="QDX-iU-sGa" customClass="ProfileScreenViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vpg-h7-DzV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCx-kJ-i2W">
@@ -447,10 +447,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailAdressLabel" destination="xFP-v9-Oxd" id="oAN-ev-qcz"/>
-                        <outlet property="errorImage" destination="jsI-EH-2rK" id="BxU-cR-Dpg"/>
-                        <outlet property="errorMessage" destination="0ig-hV-jQu" id="cxW-EM-u8h"/>
-                        <outlet property="fullname_Label" destination="lCx-kJ-i2W" id="7RY-W3-UTR"/>
+                        <outlet property="EmailAdressField" destination="xFP-v9-Oxd" id="oAN-ev-qcz"/>
+                        <outlet property="ErrorImage" destination="jsI-EH-2rK" id="BxU-cR-Dpg"/>
+                        <outlet property="ErrorMessage" destination="0ig-hV-jQu" id="cxW-EM-u8h"/>
+                        <outlet property="FullNameField" destination="lCx-kJ-i2W" id="7RY-W3-UTR"/>
                         <segue destination="3mM-1a-jNe" kind="show" identifier="goChangePasswordVC" id="Vpy-4r-bbh"/>
                         <segue destination="ypT-rB-Ogn" kind="show" identifier="signout" id="aRF-eP-QTj"/>
                     </connections>
@@ -464,7 +464,7 @@
             <objects>
                 <viewController storyboardIdentifier="NotesScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sUL-vh-ATn" customClass="NotesScreenViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YPV-3u-JJo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rFQ-kz-L8L">
@@ -506,8 +506,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="note" destination="ipI-JC-7sM" id="2S2-bl-M7L"/>
-                                            <outlet property="title" destination="XF8-Lb-76S" id="VVH-m4-hvX"/>
+                                            <outlet property="Note" destination="ipI-JC-7sM" id="2S2-bl-M7L"/>
+                                            <outlet property="Title" destination="XF8-Lb-76S" id="VVH-m4-hvX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -560,8 +560,8 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="notesTable" destination="rFQ-kz-L8L" id="bhP-At-Pt7"/>
-                        <outlet property="searchBar" destination="0sK-zZ-71A" id="5Ce-9L-iCw"/>
+                        <outlet property="NotesTable" destination="rFQ-kz-L8L" id="bhP-At-Pt7"/>
+                        <outlet property="SearchBar" destination="0sK-zZ-71A" id="5Ce-9L-iCw"/>
                         <segue destination="3Bk-Nx-GpS" kind="show" identifier="goEditNoteVC" id="c6J-Fc-DRW"/>
                         <segue destination="bqe-cr-7nm" kind="presentation" identifier="showAddNotePage" id="FC0-ay-k1j"/>
                         <segue destination="QDX-iU-sGa" kind="show" identifier="goProfilePage" id="xAF-Cr-i1L"/>
@@ -584,7 +584,7 @@
             <objects>
                 <viewController id="3Bk-Nx-GpS" customClass="EditNoteViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D3r-al-lSJ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemon Cake &amp; Blueberry" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oa-bP-0H2">
@@ -617,7 +617,7 @@
                                     <color key="baseBackgroundColor" name="signuptext"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="saveNote:" destination="3Bk-Nx-GpS" eventType="touchUpInside" id="804-42-Bgm"/>
+                                    <action selector="SaveNote:" destination="3Bk-Nx-GpS" eventType="touchUpInside" id="804-42-Bgm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -637,8 +637,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Edit Note" id="UdN-0q-KKw"/>
                     <connections>
-                        <outlet property="note_detail" destination="y6a-72-5cp" id="dpL-1I-Ui6"/>
-                        <outlet property="note_title" destination="3oa-bP-0H2" id="ihi-lU-sQQ"/>
+                        <outlet property="NoteDetail" destination="y6a-72-5cp" id="dpL-1I-Ui6"/>
+                        <outlet property="NoteTitle" destination="3oa-bP-0H2" id="ihi-lU-sQQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncL-Xu-4N6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -650,11 +650,11 @@
             <objects>
                 <viewController id="vzN-RE-XNn" customClass="ForgotPasswordViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l8S-Dl-AZG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNq-IC-V8s">
-                                <rect key="frame" x="98.000000000000014" y="10" width="197.33333333333337" height="31.333333333333329"/>
+                                <rect key="frame" x="98.000000000000014" y="9.9999999999999982" width="197.33333333333337" height="31.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -708,8 +708,8 @@ the instructions.</string>
                     </view>
                     <navigationItem key="navigationItem" id="Vij-Vg-Bv4"/>
                     <connections>
-                        <outlet property="emailAdressLabel" destination="hQ8-Ni-fx7" id="FwL-Fg-PE1"/>
-                        <outlet property="resetPasswordButton" destination="wCp-Fl-GfW" id="5nl-PI-WvH"/>
+                        <outlet property="EmailAdressLabel" destination="hQ8-Ni-fx7" id="FwL-Fg-PE1"/>
+                        <outlet property="ResetPasswordButton" destination="wCp-Fl-GfW" id="5nl-PI-WvH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdQ-Le-HsT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -721,7 +721,7 @@ the instructions.</string>
             <objects>
                 <viewController id="bqe-cr-7nm" customClass="AddNoteScreenViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5mW-I1-qYG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0TL-0S-ceS">
@@ -795,8 +795,8 @@ the instructions.</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="note_description" destination="OsY-l5-bYS" id="TR7-92-mAm"/>
-                        <outlet property="note_title" destination="0TL-0S-ceS" id="QCi-Ba-D41"/>
+                        <outlet property="NoteDescription" destination="OsY-l5-bYS" id="TR7-92-mAm"/>
+                        <outlet property="NoteTitle" destination="0TL-0S-ceS" id="QCi-Ba-D41"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TU8-lR-LDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -826,7 +826,7 @@ the instructions.</string>
             <objects>
                 <viewController id="3mM-1a-jNe" customClass="PasswordChangeScreenViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2K8-iD-Y6L">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="400-Ra-WrI">
@@ -916,12 +916,12 @@ the instructions.</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="errorImage" destination="VD2-Be-35C" id="9rf-qk-AVR"/>
-                        <outlet property="errorMessage" destination="ncB-ZZ-YCy" id="mr7-z0-TrS"/>
-                        <outlet property="new_password" destination="ZQm-zt-eGO" id="8Nv-Ji-nwd"/>
-                        <outlet property="password" destination="400-Ra-WrI" id="55F-GU-RRp"/>
-                        <outlet property="re_new_password" destination="3gc-Q2-TZo" id="H08-Jw-0Tj"/>
-                        <outlet property="saveButton" destination="ib4-Hx-3Sp" id="wnW-uN-cGx"/>
+                        <outlet property="ErrorImage" destination="VD2-Be-35C" id="9rf-qk-AVR"/>
+                        <outlet property="ErrorMessage" destination="ncB-ZZ-YCy" id="mr7-z0-TrS"/>
+                        <outlet property="NewPassword" destination="ZQm-zt-eGO" id="8Nv-Ji-nwd"/>
+                        <outlet property="Password" destination="400-Ra-WrI" id="55F-GU-RRp"/>
+                        <outlet property="ReNewPassword" destination="3gc-Q2-TZo" id="H08-Jw-0Tj"/>
+                        <outlet property="SaveButton" destination="ib4-Hx-3Sp" id="wnW-uN-cGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWI-G1-TLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

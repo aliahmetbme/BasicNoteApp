@@ -11,8 +11,8 @@ class EditNoteViewController: UIViewController {
     let noteService = NoteService()
     var id: Int = 0
     
-    @IBOutlet var note_title: UILabel!
-    @IBOutlet var note_detail: UITextView!
+    @IBOutlet var NoteTitle: UILabel!
+    @IBOutlet var NoteDetail: UITextView!
     
     
     override func viewDidLoad() {
@@ -23,8 +23,8 @@ class EditNoteViewController: UIViewController {
             case .success(let response):
                 print(response)
                 let NOTE = response.data
-                self.note_detail.text = NOTE.note
-                self.note_title.text = NOTE.title
+                self.NoteDetail.text = NOTE.note
+                self.NoteTitle.text = NOTE.title
             case .failure(let error):
                 print(error)
             }
@@ -35,8 +35,8 @@ class EditNoteViewController: UIViewController {
 
 // Action
 extension EditNoteViewController {
-    @IBAction func saveNote(_ sender: Any) {
-        let note = Note(id: self.id, title: note_title.text!, note: note_detail.text!)
+    @IBAction func SaveNote(_ sender: Any) {
+        let note = Note(id: self.id, title: NoteTitle.text!, note: NoteDetail.text!)
         
         noteService.updateNote(note: note) {
             result in

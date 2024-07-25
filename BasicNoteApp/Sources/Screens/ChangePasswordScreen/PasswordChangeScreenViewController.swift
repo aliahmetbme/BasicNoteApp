@@ -9,12 +9,12 @@ import UIKit
 
 class PasswordChangeScreenViewController: UIViewController {
 
-    @IBOutlet var password: UITextField!
-    @IBOutlet var new_password: UITextField!
-    @IBOutlet var re_new_password: UITextField!
-    @IBOutlet var saveButton: UIButton!
-    @IBOutlet var errorImage: UIImageView!
-    @IBOutlet var errorMessage: UILabel!
+    @IBOutlet var Password: UITextField!
+    @IBOutlet var NewPassword: UITextField!
+    @IBOutlet var ReNewPassword: UITextField!
+    @IBOutlet var SaveButton: UIButton!
+    @IBOutlet var ErrorImage: UIImageView!
+    @IBOutlet var ErrorMessage: UILabel!
     let userService = UserService()
     var initialPassword: String? = nil
     
@@ -22,27 +22,27 @@ class PasswordChangeScreenViewController: UIViewController {
         super.viewDidLoad()
         initialDesign()
         checkIsShouldEnabledSaveChangesButton()
-        password.delegate = self
-        new_password.delegate = self
-        re_new_password.delegate = self
+        Password.delegate = self
+        NewPassword.delegate = self
+        ReNewPassword.delegate = self
 
     }
     
     private func initialDesign() {
-        password.initialDesign()
-        new_password.initialDesign()
-        re_new_password.initialDesign()
-        errorImage.isHidden = true
-        errorImage.isHidden = true
+        Password.initialDesign()
+        NewPassword.initialDesign()
+        ReNewPassword.initialDesign()
+        ErrorImage.isHidden = true
+        ErrorImage.isHidden = true
     }
     
     
     private func checkIsShouldEnabledSaveChangesButton () {
-        if (password.text == "" || new_password.text == "" || re_new_password.text == "") {
-            saveButton.isEnabled = false
-            saveButton.disabledDesign()
+        if (Password.text == "" || NewPassword.text == "" || ReNewPassword.text == "") {
+            SaveButton.isEnabled = false
+            SaveButton.disabledDesign()
         } else {
-            saveButton.isEnabled = true
+            SaveButton.isEnabled = true
 
         }
     }
@@ -54,19 +54,19 @@ extension PasswordChangeScreenViewController {
     @IBAction private func changePassword(_ sender: Any) {
         initialDesign()
         
-        let changePasswordStruct = ChangePassword(password: password.text!, new_password: new_password.text!, new_password_confirmation: re_new_password.text!)
+        let changePasswordStruct = ChangePassword(password: Password.text!, new_password: NewPassword.text!, new_password_confirmation: ReNewPassword.text!)
         
         userService.changePassword(changePasswordStruct: changePasswordStruct) { result in
             switch result {
             case .success(let response):
                 print("Password changed successfully: \(response)")
             case .failure(let error):
-                self.password.showInvalidFunctionError()
-                self.new_password.showInvalidFunctionError()
-                self.re_new_password.showInvalidFunctionError()
-                self.errorImage.isHidden = false
-                self.errorMessage.text = error.localizedDescription
-                self.errorMessage.isHidden = false
+                self.Password.showInvalidFunctionError()
+                self.NewPassword.showInvalidFunctionError()
+                self.ReNewPassword.showInvalidFunctionError()
+                self.ErrorImage.isHidden = false
+                self.ErrorMessage.text = error.localizedDescription
+                self.ErrorMessage.isHidden = false
             }
         }
     }
@@ -89,6 +89,6 @@ extension PasswordChangeScreenViewController: UITextFieldDelegate {
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         textField.text = ""
         checkIsShouldEnabledSaveChangesButton()
-        return true // TextField'ın temizlenmesine izin vermek için true döndür
+        return true
     }
 }

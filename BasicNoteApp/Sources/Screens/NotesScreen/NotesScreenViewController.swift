@@ -10,42 +10,54 @@ import UIKit
 
 class NotesScreenViewController: UIViewController {
     
-    @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var SearchBar: UISearchBar!
+    @IBOutlet var NotesTable: UITableView!
+    
     let noteService = NoteService()
-    var noteTakenSucces: (([Note]) -> Void)?
-    var noteTakenFailure: ((Error) -> Void)?
     var notesArray: [Note] = []
-    @IBOutlet var notesTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackButtonTitle(isHideNavBar: false)
-        noteTakenSucces = { data in
-            self.notesArray = data
-            self.notesTable.reloadData()
-        }
-        self.navigationItem.titleView = searchBar
-        notesTable.delegate = self
-        notesTable.dataSource = self
-        getAllNotes()
-        
+        initialSettings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setBackButtonTitle(isHideNavBar: false)
-        self.navigationItem.hidesBackButton = true
-        getAllNotes()
+        initialSettings()
     }
     
-    private func getAllNotes(){
+    private func initialSettings () {
+        
+        NotesTable.delegate = self
+        NotesTable.dataSource = self
+        
+        setBackButtonTitle(isHideNavBar: false)
+        getAllNotes()
+
+        self.navigationItem.titleView = SearchBar
+        self.navigationItem.hidesBackButton = true
+    }
+    
+    private func noteTakenSucces(data: [Note]) {
+        
+        self.notesArray = data
+        self.NotesTable.reloadData()
+    }
+    
+    private func noteTakenFailure(error: Error) {
+        
+        print(error)
+    }
+
+    private func getAllNotes() {
+        
         noteService.getAllNotes() {
             result in
             switch result {
             case.success(let response):
-                self.noteTakenSucces?(response.data.data)
+                self.noteTakenSucces(data: response.data.data)
             case .failure(let error):
-                print(error)
+                self.noteTakenFailure(error: error)
             }
         }
     }
@@ -84,10 +96,10 @@ extension NotesScreenViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let note = notesArray[indexPath.row]
-        let cell = notesTable.dequeueReusableCell(withIdentifier: "notecell", for: indexPath) as! NoteViewCell
+        let cell = NotesTable.dequeueReusableCell(withIdentifier: "notecell", for: indexPath) as! NoteViewCell
         
-        cell.note.text = note.note
-        cell.title.text = note.title
+        cell.Note.text = note.note
+        cell.Title.text = note.title
         
         return cell
     }

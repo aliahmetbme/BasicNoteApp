@@ -19,7 +19,7 @@ class NoteService {
     }
     
     func deleteNote(note_id: Int, completion: @escaping (Result<DeletedNote, NetworkError>) -> Void) {
-        let parameters: Parameters = [":note_id": note_id]
+        let parameters: Parameters = ["note_id": note_id]
         let token = UserDefaults.standard.value(forKey: "accesToken") as! String
         let headers : HTTPHeaders = ["Authorization":"Bearer \(token)" ]
 
