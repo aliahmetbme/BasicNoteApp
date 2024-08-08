@@ -14,10 +14,13 @@ class NotesScreenViewController: UIViewController {
     @IBOutlet var notesTable: UITableView!
     
     let noteService = NoteService()
+    var viewModel = NoteScreenViewModel()
     var notesArray: [Note] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBindings()
+        viewModel.getAllNotes()
         initialSettings()
     }
     
@@ -26,41 +29,41 @@ class NotesScreenViewController: UIViewController {
         initialSettings()
     }
     
+    
+    private func setupBindings() {
+
+        viewModel.noteTakenSucces =  { data in
+            self.notesArray = data
+            self.notesTable.reloadData()
+        }
+        
+        viewModel.noteTakenFailure =  { message in
+            print(message)
+            self.showToast(message: message, isSuccess: false)
+        }
+        
+        viewModel.noteDeleteSucces =  { message in
+            print(message)
+            self.showToast(message: message, isSuccess: true)
+        }
+        
+        viewModel.noteDeleteSucces =  { message in
+            print(message)
+            self.showToast(message: message, isSuccess: true)
+        }
+    }
+    
     private func initialSettings () {
         
         notesTable.delegate = self
         notesTable.dataSource = self
         
         setBackButtonTitle(isHideNavBar: false)
-        getAllNotes()
 
         self.navigationItem.titleView = searchBar
         self.navigationItem.hidesBackButton = true
     }
     
-    private func noteTakenSucces(data: [Note]) {
-        
-        self.notesArray = data
-        self.notesTable.reloadData()
-    }
-    
-    private func noteTakenFailure(error: Error) {
-        
-        print(error)
-    }
-
-    private func getAllNotes() {
-        
-        noteService.getAllNotes() {
-            result in
-            switch result {
-            case.success(let response):
-                self.noteTakenSucces(data: response.data.data)
-            case .failure(let error):
-                self.noteTakenFailure(error: error)
-            }
-        }
-    }
 
 }
 
@@ -85,8 +88,9 @@ extension NotesScreenViewController: UITableViewDelegate, UITableViewDataSource 
             }
         } else if (segue.identifier ==  "showAddNotePage") {
             let nextVC = segue.destination as! AddNoteScreenViewController
-            nextVC.onDismiss = {
-                self.getAllNotes()
+            // dismis olunca geliyordu sor
+            nextVC.viewModel.onDismiss = {
+                self.viewModel.getAllNotes()
             }
         }
     }
@@ -107,6 +111,7 @@ extension NotesScreenViewController: UITableViewDelegate, UITableViewDataSource 
     // swipe left
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let note = notesArray[indexPath.row]
+        
         let editAction = UIContextualAction(style: .normal, title: "") { (_, _, completionHandler) in
             self.performSegue(withIdentifier: "goEditNoteVC", sender: note.id)
             completionHandler(true)
@@ -119,15 +124,7 @@ extension NotesScreenViewController: UITableViewDelegate, UITableViewDataSource 
             let alertController = UIAlertController(title: "Delete Note", message: "Are you sure you want to deletethis note.", preferredStyle: .alert)
             
             let confirmDeleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
-                self.noteService.deleteNote(note_id:note.id) { results in
-                    switch results {
-                    case .success(let response):
-                        print(response)
-                        self.getAllNotes()
-                    case .failure(let error):
-                        print(error)
-                    }
-                }
+                self.viewModel.deleteNote(id: note.id)
             }
             
             let cancelDeleteAction = UIAlertAction(title: "Cancel", style: .default)

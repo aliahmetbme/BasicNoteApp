@@ -16,10 +16,15 @@ extension UIButton {
     }
     
     func disabledDesign() {
-        if (!self.isEnabled) {
-            self.backgroundColor = UIColor(named: "buttonLoginDisabled")
-            self.setTitleColor(UIColor.textPrimary, for: .normal)
-        }
+        self.backgroundColor = UIColor(named: "buttonLoginDisabled")
+        self.setTitleColor(UIColor.textPrimary, for: .normal)
+        self.makeRadius()
+    }
+    
+    func enableDesign() {
+        self.backgroundColor = UIColor(named: "signuptext")
+        self.setTitleColor(UIColor.white, for: .normal)
+        self.makeRadius()
     }
     
     func setAttributedTitle(part1: String, color1: UIColor, part2: String, color2: UIColor, for state: UIControl.State) {

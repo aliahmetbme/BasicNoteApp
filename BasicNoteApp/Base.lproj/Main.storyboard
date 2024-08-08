@@ -322,6 +322,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EbY-FA-jP8"/>
                     <connections>
+                        <outlet property="LoginButton" destination="seF-zn-pl1" id="fht-cM-fsJ"/>
                         <outlet property="emailAdressLabel" destination="Ssq-K3-enw" id="auO-eM-0C2"/>
                         <outlet property="errorImage" destination="q1h-Ow-a6C" id="8z3-qK-aGB"/>
                         <outlet property="errorMessage" destination="qKA-Pu-GLq" id="cDG-Sk-ZVa"/>
@@ -721,7 +722,7 @@ the instructions.</string>
             <objects>
                 <viewController id="bqe-cr-7nm" customClass="AddNoteScreenViewController" customModule="BasicNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5mW-I1-qYG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0TL-0S-ceS">
@@ -795,8 +796,9 @@ the instructions.</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="NoteDescription" destination="OsY-l5-bYS" id="TR7-92-mAm"/>
-                        <outlet property="NoteTitle" destination="0TL-0S-ceS" id="QCi-Ba-D41"/>
+                        <outlet property="AddNoteButton" destination="7M2-XE-LOz" id="3Qf-F7-w5N"/>
+                        <outlet property="NoteDescription" destination="OsY-l5-bYS" id="osr-9U-4fq"/>
+                        <outlet property="NoteTitle" destination="0TL-0S-ceS" id="MjR-TK-osy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TU8-lR-LDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -930,7 +932,7 @@ the instructions.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aRF-eP-QTj"/>
+        <segue reference="wXA-U5-z3V"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="erroricon" width="33.333332061767578" height="33.333332061767578"/>
@@ -965,7 +967,7 @@ the instructions.</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

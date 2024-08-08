@@ -18,7 +18,7 @@ class AuthService {
         NetworkManager.shared.request(.login, method: .post, parameters: parameters, completion: completion)
     }
     
-    func register(user: UserRegister, completion: @escaping (Result<RegisterResponse, NetworkError>) -> Void) {
+    func register(user: UserRegister, completion: @escaping (Result<SuccesfullyRegisterResponse, NetworkError>) -> Void) {
         let parameters: Parameters = [
             "email": user.email,
             "full_name": user.fullName,
@@ -28,6 +28,11 @@ class AuthService {
         NetworkManager.shared.request(.register, method: .post, parameters: parameters, completion: completion)
     }
     
-    func forgotPassword() {}
+    func forgotPassword(email: String, completion: @escaping (Result<SuccesfullyFogetPasswordResponse, NetworkError>) -> Void) {
+        
+        let parameter: Parameters = ["email": email]
+        
+        NetworkManager.shared.request(.register, method: .post, parameters: parameter, completion: completion)
+    }
     
 }

@@ -8,18 +8,20 @@
 import UIKit
 
 class ForgotPasswordViewController: UIViewController {
-
+    
     @IBOutlet private var EmailAdressLabel: UITextField!
     @IBOutlet private var ResetPasswordButton: UIButton!
-    
+    var viewModel = ForgetPasswordViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialDesign()
+        setupBinding()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         initialDesign()
+        setupBinding()
     }
     
     private func initialDesign() {
@@ -27,6 +29,20 @@ class ForgotPasswordViewController: UIViewController {
         EmailAdressLabel.initialDesign()
         setBackButtonTitle(isHideNavBar: false)
     }
+    
+    private func setupBinding() {
+        
+        viewModel.onSuccesfullySenginForhgetRequest = { message in
+            print(message)
+            self.showToast(message: message, isSuccess: true)
+        }
+        viewModel.onErrorSenginForhgetRequest = { message in
+            print(message)
+            self.showToast(message: message, isSuccess: false)
+        }
+    }
+    
+    
 }
 
 // Actions
@@ -34,8 +50,7 @@ extension ForgotPasswordViewController {
     
     @IBAction private func resetPassword(_ sender: Any) {
         // reset password
-        if !EmailAdressLabel.isValidEmail(email: EmailAdressLabel.text!) {
-            EmailAdressLabel.showInvalidFunctionError()
-        }
+        viewModel.email = EmailAdressLabel.text!
+        viewModel.resetPassword()
     }
 }
