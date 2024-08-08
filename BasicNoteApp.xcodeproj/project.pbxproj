@@ -197,6 +197,13 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		FE43C80B2C65387A003DF09E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FE725EE82C4A86DB00FA2032 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +346,7 @@
 		FEA20F6F2C4E8E2000D401FE /* ChangePasswordScreen */ = {
 			isa = PBXGroup;
 			children = (
+				FE43C80B2C65387A003DF09E /* ViewModel */,
 				FEC3C1A62C62E8B400116585 /* ViewModel */,
 				FEC3C1A52C62E87500116585 /* View */,
 			);
