@@ -117,13 +117,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FE2BEF822C345B8300DAF37A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		FE2BEF882C3465FB00DAF37A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +162,6 @@
 				FEE75E092C32AC0400F39397 /* AppDelegate.swift */,
 				FE760B222C3699DC0055E53F /* Extensions */,
 				FE760B1E2C3697880055E53F /* Screens */,
-				FE2BEF822C345B8300DAF37A /* View */,
 				FE2BEF802C345B6300DAF37A /* Models */,
 				FE760B1D2C3697770055E53F /* Resources */,
 			);
