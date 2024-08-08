@@ -33,7 +33,7 @@ class PasswordChangeViewModel: IPasswordChangeViewModel {
         userService.changePassword(changePasswordStruct: changePasswordStruct) { result in
             switch result {
             case .success(let response):
-                    self.onSuccesPasswordChange?(response.message)
+                    self.onSuccesPasswordChange?( response.message)
             case .failure(let error):
                     self.onErrorPasswordChange?(error.message)
             }
