@@ -33,7 +33,7 @@ class ProfileScreenViewModel: IProfileScreenViewModel {
         userService.updateCurrentUser(currentUser: currentUser) { response in
             switch response {
             case .success(let response):
-                self.onSuccesUpdateCurrentUser?("Succesfully Updated \(response.message)")
+                self.onSuccesUpdateCurrentUser?("Succesfully Updated  \(response.message)")
             case .failure(let error):
                 self.onErrorCurrentUser?(error.localizedDescription)
             }
