@@ -6,6 +6,7 @@ target 'BasicNoteApp' do
   use_frameworks!
   pod 'Alamofire'
   pod 'IQKeyboardManagerSwift'
+  pod 'SnapKit'
 
   # Pods for BasicNoteApp
 

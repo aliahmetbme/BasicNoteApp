@@ -13,6 +13,7 @@ extension UIViewController {
         let backButton = UIBarButtonItem()
         backButton.title = title
         self.navigationItem.backBarButtonItem = backButton
+        self.navigationItem.title = title
         navigationController?.setNavigationBarHidden(isHideNavBar, animated: true)
     }
 }
