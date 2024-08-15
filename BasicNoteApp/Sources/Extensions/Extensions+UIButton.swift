@@ -15,10 +15,13 @@ extension UIButton {
         self.clipsToBounds = true
     }
     
-    func disabledDesign() {
+    func initialDesign() {
         if (!self.isEnabled) {
             self.backgroundColor = UIColor(named: "buttonLoginDisabled")
-            self.setTitleColor(UIColor.textPrimary, for: .normal)
+            self.setTitleColor(UIColor.signuptext, for: .normal)
+        } else {
+            self.backgroundColor = UIColor.signuptext
+            self.setTitleColor(UIColor.white, for: .normal)
         }
     }
     
