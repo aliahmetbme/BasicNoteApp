@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B4F54960F8D5067EB704A2FD /* Pods_BasicNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3799336ED2C5BE62AC5AF0DB /* Pods_BasicNoteApp.framework */; };
+		FE1566BE2C64DF720024C4D5 /* NoteScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1566BD2C64DF720024C4D5 /* NoteScreenViewModel.swift */; };
+		FE1566C32C6515700024C4D5 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1566C22C6515700024C4D5 /* ForgetPasswordViewModel.swift */; };
+		FE239DD42C6406A4006D91DF /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE239DD32C6406A3006D91DF /* RegisterViewModel.swift */; };
+		FE239DD82C641C50006D91DF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE239DD72C641C50006D91DF /* LoginViewModel.swift */; };
+		FE239DDA2C642DDE006D91DF /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE239DD92C642DDE006D91DF /* AddNoteViewModel.swift */; };
+		FE239DDC2C64355D006D91DF /* EditNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE239DDB2C64355D006D91DF /* EditNoteViewModel.swift */; };
 		FE24B3452C4E90820024C9F7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24B3442C4E90820024C9F7 /* UserService.swift */; };
 		FE24B3472C4EBDAD0024C9F7 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24B3462C4EBDAD0024C9F7 /* ErrorResponse.swift */; };
 		FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */; };
+		FE45CB7A2C65413E007B23C1 /* PasswordChangeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45CB792C65413E007B23C1 /* PasswordChangeScreenViewModel.swift */; };
 		FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */; };
 		FE725EEB2C4AE9F800FA2032 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */; };
 		FE725EED2C4AEA2D00FA2032 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725EEC2C4AEA2D00FA2032 /* UserResponse.swift */; };
@@ -24,6 +31,7 @@
 		FE96520C2C4C9184006B9E50 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE96520B2C4C9184006B9E50 /* NoteModel.swift */; };
 		FEA20F6C2C4E8DB100D401FE /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA20F6B2C4E8DB100D401FE /* ProfileScreenViewController.swift */; };
 		FEA20F6E2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA20F6D2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift */; };
+		FEC3C1B22C62E9C200116585 /* ProfileScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3C1B12C62E9C200116585 /* ProfileScreenViewModel.swift */; };
 		FED5E9E32C49864B00F72C95 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E22C49864B00F72C95 /* Config.swift */; };
 		FED5E9E52C49866A00F72C95 /* ConfigExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E42C49866A00F72C95 /* ConfigExample.swift */; };
 		FED5E9E72C49867600F72C95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E62C49867600F72C95 /* User.swift */; };
@@ -44,9 +52,16 @@
 		3799336ED2C5BE62AC5AF0DB /* Pods_BasicNoteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicNoteApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8044875D1927527B4155225D /* Pods-BasicNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicNoteApp.release.xcconfig"; path = "Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp.release.xcconfig"; sourceTree = "<group>"; };
 		F0B478FB940B4BB00B7F1FA2 /* Pods-BasicNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicNoteApp.debug.xcconfig"; path = "Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FE1566BD2C64DF720024C4D5 /* NoteScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteScreenViewModel.swift; sourceTree = "<group>"; };
+		FE1566C22C6515700024C4D5 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
+		FE239DD32C6406A3006D91DF /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		FE239DD72C641C50006D91DF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FE239DD92C642DDE006D91DF /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
+		FE239DDB2C64355D006D91DF /* EditNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewModel.swift; sourceTree = "<group>"; };
 		FE24B3442C4E90820024C9F7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		FE24B3462C4EBDAD0024C9F7 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FE45CB792C65413E007B23C1 /* PasswordChangeScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordChangeScreenViewModel.swift; sourceTree = "<group>"; };
 		FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		FE725EEC2C4AEA2D00FA2032 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
@@ -60,6 +75,7 @@
 		FE96520B2C4C9184006B9E50 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		FEA20F6B2C4E8DB100D401FE /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
 		FEA20F6D2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeScreenViewController.swift; sourceTree = "<group>"; };
+		FEC3C1B12C62E9C200116585 /* ProfileScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewModel.swift; sourceTree = "<group>"; };
 		FED5E9E22C49864B00F72C95 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FED5E9E42C49866A00F72C95 /* ConfigExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigExample.swift; sourceTree = "<group>"; };
 		FED5E9E62C49867600F72C95 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -107,6 +123,62 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE1566BF2C6515500024C4D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE1566C02C6515570024C4D5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE1566C22C6515700024C4D5 /* ForgetPasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE239DD12C640684006D91DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEE75E0D2C32AC0400F39397 /* RegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE239DD22C64068B006D91DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE239DD32C6406A3006D91DF /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE239DD52C641C30006D91DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE239DD62C641C38006D91DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE239DD72C641C50006D91DF /* LoginViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE239DDD2C643EE4006D91DF /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FE9652032C4C2C03006B9E50 /* NoteViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
 		FE2BEF802C345B6300DAF37A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,8 +220,8 @@
 		FE7548972C4B2CD900362778 /* NotesScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FE7548982C4B2CFF00362778 /* NotesScreenViewController.swift */,
-				FE9652032C4C2C03006B9E50 /* NoteViewCell.swift */,
+				FEC3C1AE2C62E97000116585 /* ViewModel */,
+				FEC3C1AD2C62E96A00116585 /* View */,
 			);
 			path = NotesScreen;
 			sourceTree = "<group>";
@@ -195,7 +267,8 @@
 		FE760B1F2C3698880055E53F /* RegisterScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FEE75E0D2C32AC0400F39397 /* RegisterViewController.swift */,
+				FE239DD22C64068B006D91DF /* ViewModel */,
+				FE239DD12C640684006D91DF /* View */,
 			);
 			path = RegisterScreen;
 			sourceTree = "<group>";
@@ -203,7 +276,8 @@
 		FE760B202C3698950055E53F /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */,
+				FE239DD62C641C38006D91DF /* ViewModel */,
+				FE239DD52C641C30006D91DF /* View */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -211,7 +285,8 @@
 		FE760B212C3698AC0055E53F /* ForgotPasswordScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */,
+				FE1566C02C6515570024C4D5 /* ViewModel */,
+				FE1566BF2C6515500024C4D5 /* View */,
 			);
 			path = ForgotPasswordScreen;
 			sourceTree = "<group>";
@@ -237,7 +312,8 @@
 		FE9652052C4C66D7006B9E50 /* EditNoteScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FE9652062C4C6713006B9E50 /* EditNoteViewController.swift */,
+				FEC3C1AC2C62E96100116585 /* View */,
+				FEC3C1AB2C62E95800116585 /* ViewModel */,
 			);
 			path = EditNoteScreen;
 			sourceTree = "<group>";
@@ -245,7 +321,8 @@
 		FE9652082C4C902E006B9E50 /* AddNoteScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FE9652092C4C904E006B9E50 /* AddNoteScreenViewController.swift */,
+				FEC3C1AA2C62E94700116585 /* ViewModel */,
+				FEC3C1A92C62E91B00116585 /* View */,
 			);
 			path = AddNoteScreen;
 			sourceTree = "<group>";
@@ -253,7 +330,8 @@
 		FEA20F6A2C4E8D9900D401FE /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FEA20F6B2C4E8DB100D401FE /* ProfileScreenViewController.swift */,
+				FEC3C1A82C62E90E00116585 /* ViewModel */,
+				FEC3C1A72C62E90700116585 /* View */,
 			);
 			path = ProfileScreen;
 			sourceTree = "<group>";
@@ -261,9 +339,91 @@
 		FEA20F6F2C4E8E2000D401FE /* ChangePasswordScreen */ = {
 			isa = PBXGroup;
 			children = (
-				FEA20F6D2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift */,
+				FEC3C1A62C62E8B400116585 /* ViewModel */,
+				FEC3C1A52C62E87500116585 /* View */,
 			);
 			path = ChangePasswordScreen;
+			sourceTree = "<group>";
+		};
+		FEC3C1A52C62E87500116585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEA20F6D2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEC3C1A62C62E8B400116585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE45CB792C65413E007B23C1 /* PasswordChangeScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEC3C1A72C62E90700116585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEA20F6B2C4E8DB100D401FE /* ProfileScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEC3C1A82C62E90E00116585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FEC3C1B12C62E9C200116585 /* ProfileScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEC3C1A92C62E91B00116585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE9652092C4C904E006B9E50 /* AddNoteScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEC3C1AA2C62E94700116585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE239DD92C642DDE006D91DF /* AddNoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEC3C1AB2C62E95800116585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE239DDB2C64355D006D91DF /* EditNoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEC3C1AC2C62E96100116585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE9652062C4C6713006B9E50 /* EditNoteViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEC3C1AD2C62E96A00116585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE7548982C4B2CFF00362778 /* NotesScreenViewController.swift */,
+				FE239DDD2C643EE4006D91DF /* ViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEC3C1AE2C62E97000116585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE1566BD2C64DF720024C4D5 /* NoteScreenViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FED5E9EC2C49EB2000F72C95 /* Network */ = {
@@ -437,6 +597,7 @@
 				FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */,
 				FE96520C2C4C9184006B9E50 /* NoteModel.swift in Sources */,
 				FE24B3452C4E90820024C9F7 /* UserService.swift in Sources */,
+				FE45CB7A2C65413E007B23C1 /* PasswordChangeScreenViewModel.swift in Sources */,
 				FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */,
 				FEE75E0E2C32AC0400F39397 /* RegisterViewController.swift in Sources */,
 				FE8FF9B02C3DDB8600A19C03 /* Extensions+UITextField.swift in Sources */,
@@ -444,19 +605,26 @@
 				FE8FF9B22C3DDBBE00A19C03 /* Extensions+UIButton.swift in Sources */,
 				FE725EED2C4AEA2D00FA2032 /* UserResponse.swift in Sources */,
 				FE9652072C4C6713006B9E50 /* EditNoteViewController.swift in Sources */,
+				FE1566BE2C64DF720024C4D5 /* NoteScreenViewModel.swift in Sources */,
 				FE7548992C4B2CFF00362778 /* NotesScreenViewController.swift in Sources */,
+				FE239DDC2C64355D006D91DF /* EditNoteViewModel.swift in Sources */,
 				FED5E9E32C49864B00F72C95 /* Config.swift in Sources */,
 				FED5E9F62C49ECC000F72C95 /* NoteService.swift in Sources */,
+				FE239DD82C641C50006D91DF /* LoginViewModel.swift in Sources */,
 				FED5E9F02C49EC1200F72C95 /* APIEndpoints.swift in Sources */,
 				FEE75E0A2C32AC0400F39397 /* AppDelegate.swift in Sources */,
 				FED5E9EB2C49E02900F72C95 /* Extension+UIViewController.swift in Sources */,
 				FED5E9E72C49867600F72C95 /* User.swift in Sources */,
+				FE1566C32C6515700024C4D5 /* ForgetPasswordViewModel.swift in Sources */,
+				FE239DD42C6406A4006D91DF /* RegisterViewModel.swift in Sources */,
 				FEA20F6E2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift in Sources */,
 				FEA20F6C2C4E8DB100D401FE /* ProfileScreenViewController.swift in Sources */,
 				FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */,
 				FE24B3472C4EBDAD0024C9F7 /* ErrorResponse.swift in Sources */,
 				FE725EEB2C4AE9F800FA2032 /* AuthResponse.swift in Sources */,
+				FE239DDA2C642DDE006D91DF /* AddNoteViewModel.swift in Sources */,
 				FED5E9F42C49ECB000F72C95 /* AuthService.swift in Sources */,
+				FEC3C1B22C62E9C200116585 /* ProfileScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

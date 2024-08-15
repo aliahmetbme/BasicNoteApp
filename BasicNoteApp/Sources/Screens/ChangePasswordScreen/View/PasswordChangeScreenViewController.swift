@@ -8,27 +8,29 @@
 import UIKit
 
 class PasswordChangeScreenViewController: UIViewController {
-
+    
     private var Password = UITextField()
     private var NewPassword = UITextField()
     private var ReNewPassword = UITextField()
     private var ChangePasswordButton = UIButton()
     private var ErrorImage = UIImageView()
     private var ErrorMessage = UILabel()
-
+    
     let userService = UserService()
-    var initialPassword: String? = nil
+    let viewModel = PasswordChangeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        setBackButtonTitle(title: "Change Password",isHideNavBar: false)
+        initialDesign()
         configure()
-        checkIsShouldEnabledSaveChangesButton()
+        initialSettings()
+        setupBindings()
+    }
+    
+    private func initialSettings() {
         Password.delegate = self
         NewPassword.delegate = self
         ReNewPassword.delegate = self
-
     }
     
     private func configure() {
@@ -53,37 +55,39 @@ class PasswordChangeScreenViewController: UIViewController {
     }
     
     
-    private func checkIsShouldEnabledSaveChangesButton () {
-        if (Password.text == "" || NewPassword.text == "" || ReNewPassword.text == "") {
-            ChangePasswordButton.isEnabled = false
-            ChangePasswordButton.initialDesign()
-        } else {
-            ChangePasswordButton.isEnabled = true
-
+    private func initialDesign() {
+        Password.initialDesign()
+        NewPassword.initialDesign()
+        ReNewPassword.initialDesign()
+        
+        ErrorImage.isHidden = true
+        ErrorMessage.isHidden = true
+        SaveButton.isEnabled = false
+        
+    }
+    
+    private func setupBindings() {
+        viewModel.onSuccesPasswordChange = { [weak self] message in
+            self?.showToast(message: message, isSuccess: true)
+        }
+        
+        viewModel.onErrorPasswordChange = { [weak self] message in
+            self?.ErrorMessage.text = message
+            self?.ErrorMessage.isHidden = false
+            self?.ErrorImage.isHidden = false
+        }
+        
+        viewModel.isSaveButtonEnabled = { [weak self] isEnabled in
+            self?.SaveButton.isEnabled = isEnabled
+            isEnabled ? self?.SaveButton.enableDesign() : self?.SaveButton.disabledDesign()
         }
     }
-
 }
-
 // Actions
 extension PasswordChangeScreenViewController {
     @IBAction private func changePassword(_ sender: Any) {
-        
-        let changePasswordStruct = ChangePassword(password: Password.text!, newPassword: NewPassword.text!, newPasswordConfirmation: ReNewPassword.text!)
-        
-        userService.changePassword(changePasswordStruct: changePasswordStruct) { result in
-            switch result {
-            case .success(let response):
-                print("Password changed successfully: \(response)")
-            case .failure(let error):
-                self.Password.showInvalidFunctionError()
-                self.NewPassword.showInvalidFunctionError()
-                self.ReNewPassword.showInvalidFunctionError()
-                self.ErrorImage.isHidden = false
-                self.ErrorMessage.text = error.localizedDescription
-                self.ErrorMessage.isHidden = false
-            }
-        }
+        initialDesign()
+        viewModel.changePassword()
     }
     
     @objc private func turnBack() {
@@ -94,17 +98,30 @@ extension PasswordChangeScreenViewController {
 // TextView Delegates
 extension PasswordChangeScreenViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        checkIsShouldEnabledSaveChangesButton()
+        updateViewModel(textField: textField)
+        viewModel.validateInputs()
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        checkIsShouldEnabledSaveChangesButton()
+        updateViewModel(textField: textField)
+        viewModel.validateInputs()
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         textField.text = ""
-        checkIsShouldEnabledSaveChangesButton()
+        updateViewModel(textField: textField)
+        viewModel.validateInputs()
         return true
+    }
+    
+    private func updateViewModel(textField: UITextField) {
+        if textField == Password {
+            viewModel.password = textField.text ?? ""
+        } else if textField == NewPassword {
+            viewModel.newPassword = textField.text ?? ""
+        } else if textField == ReNewPassword {
+            viewModel.reNewPassword = textField.text ?? ""
+        }
     }
 }
 

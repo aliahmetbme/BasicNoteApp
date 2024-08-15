@@ -193,6 +193,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="EbY-FA-jP8"/>
                     <connections>
+<<<<<<< HEAD
+                        <outlet property="LoginButton" destination="seF-zn-pl1" id="fht-cM-fsJ"/>
+                        <outlet property="emailAdressLabel" destination="Ssq-K3-enw" id="auO-eM-0C2"/>
+                        <outlet property="errorImage" destination="q1h-Ow-a6C" id="8z3-qK-aGB"/>
+                        <outlet property="errorMessage" destination="qKA-Pu-GLq" id="cDG-Sk-ZVa"/>
+                        <outlet property="goRegisterPageButton" destination="ssy-p8-Ohh" id="0re-ra-E1h"/>
+                        <outlet property="passwordLabel" destination="yR1-i2-uRB" id="Ihi-gE-F5X"/>
+=======
+>>>>>>> develop
                         <segue destination="vzN-RE-XNn" kind="show" identifier="goForgorVC" id="zpw-lI-7wm"/>
                         <segue destination="sUL-vh-ATn" kind="show" identifier="goNotesPage" id="jmS-Ra-BAz"/>
                     </connections>
@@ -569,6 +578,14 @@ the instructions.</string>
                             <constraint firstItem="THa-e0-kUl" firstAttribute="top" secondItem="fDH-a9-P7d" secondAttribute="top" constant="40" id="yyV-Sm-TaL"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
+                    <connections>
+                        <outlet property="AddNoteButton" destination="7M2-XE-LOz" id="3Qf-F7-w5N"/>
+                        <outlet property="NoteDescription" destination="OsY-l5-bYS" id="osr-9U-4fq"/>
+                        <outlet property="NoteTitle" destination="0TL-0S-ceS" id="MjR-TK-osy"/>
+                    </connections>
+=======
+>>>>>>> develop
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TU8-lR-LDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -689,7 +706,7 @@ the instructions.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aRF-eP-QTj"/>
+        <segue reference="wXA-U5-z3V"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="A9D295E5-884F-49B5-AE64-028B72B208E5" catalog="system" width="128" height="113">
@@ -31886,5 +31903,11 @@ QXsADkGDAA5BhgAOQYsADkGTAAAAAAAABAEAAAAAAAAAVgAAAAAAAAAAAAAAAAAOQZY
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+<<<<<<< HEAD
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+=======
+>>>>>>> develop
     </resources>
 </document>

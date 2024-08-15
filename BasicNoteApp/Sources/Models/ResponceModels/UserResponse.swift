@@ -15,8 +15,14 @@ struct CurrentUserResponse: Codable {
 
 struct UserData: Codable {
     let id: Int
-    let full_name: String
+    let fullName: String
     let email: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case fullName = "full_name"
+        case email = "email"
+    }
 }
 
 struct UserUpdatedResponse: Codable {
@@ -27,6 +33,6 @@ struct UserUpdatedResponse: Codable {
 
 struct UserPasswordChangeResponse: Codable {
     let code: String
-    let data: String
+    let data: String?
     let message: String
 }

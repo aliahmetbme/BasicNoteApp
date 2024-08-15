@@ -15,16 +15,18 @@ class ForgotPasswordViewController: UIViewController {
     private var EmailAdressField = UITextField()
     
     private var ResetPasswordButton =  UIButton()
-    
-    
+    var viewModel = ForgetPasswordViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initialDesign()
+        setupBinding()
         configure()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         initialDesign()
+        setupBinding()
         configure()
     }
     
@@ -45,6 +47,20 @@ class ForgotPasswordViewController: UIViewController {
     private func initialDesign() {
         setBackButtonTitle(isHideNavBar: false)
     }
+    
+    private func setupBinding() {
+        
+        viewModel.onSuccesfullySenginForhgetRequest = { message in
+            print(message)
+            self.showToast(message: message, isSuccess: true)
+        }
+        viewModel.onErrorSenginForhgetRequest = { message in
+            print(message)
+            self.showToast(message: message, isSuccess: false)
+        }
+    }
+    
+    
 }
 
 // Actions

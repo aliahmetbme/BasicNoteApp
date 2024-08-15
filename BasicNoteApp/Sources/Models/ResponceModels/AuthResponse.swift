@@ -28,8 +28,14 @@ struct FailedLoginResponse: Decodable {
     let message: String
 }
 
-struct RegisterResponse: Decodable {
+struct SuccesfullyRegisterResponse: Decodable {
     let code: String
     let data: TokenData
+    let message: String
+}
+
+struct SuccesfullyFogetPasswordResponse: Decodable {
+    let code: String
+    let data: String
     let message: String
 }
