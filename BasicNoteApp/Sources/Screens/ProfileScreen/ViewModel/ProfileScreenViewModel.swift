@@ -16,8 +16,8 @@ protocol IProfileScreenViewModel {
 class ProfileScreenViewModel: IProfileScreenViewModel {
     let userService = UserService()
     
-    var fullName: String = ""
-    var email: String = ""
+    var fullName: String?
+    var email: String?
 
     var onSuccesCurrentUser: ((UserData) -> Void)?
     var onErrorCurrentUser: ((String) -> Void)?
@@ -28,14 +28,14 @@ class ProfileScreenViewModel: IProfileScreenViewModel {
     }
     
     func updateCurrentUser() {
-        let currentUser = UserUpdate(fullName: fullName, email: email)
+        let currentUser = UserUpdate(fullName: fullName!, email: email!)
         
         userService.updateCurrentUser(currentUser: currentUser) { response in
             switch response {
             case .success(let response):
                 self.onSuccesUpdateCurrentUser?("Succesfully Updated  \(response.message)")
             case .failure(let error):
-                self.onErrorCurrentUser?(error.localizedDescription)
+                self.onErrorCurrentUser?(error.message)
             }
         }
     }
@@ -46,7 +46,7 @@ class ProfileScreenViewModel: IProfileScreenViewModel {
             case .success(let response):
                 self.onSuccesCurrentUser?(response.data)
             case .failure(let error):
-                self.onErrorCurrentUser?(error.localizedDescription)
+                self.onErrorCurrentUser?(error.message)
             }
         }
     }

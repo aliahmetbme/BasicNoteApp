@@ -32,7 +32,7 @@ class LoginViewModel: ILoginViewModel {
             case .success(let response):
                 self.onSucces?(response.data.accessToken)
             case .failure(let error):
-                self.onError?(error.localizedDescription)
+                self.onError?(error.message)
             }
         }
     }

@@ -13,27 +13,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        // Bu yöntem, UIWindow `window`'u sağlanan UIWindowScene `scene`'e isteğe bağlı olarak yapılandırmak ve bağlamak için kullanılır.
+        // Bir storyboard kullanıyorsanız, `window` özelliği otomatik olarak başlatılır ve scene'e bağlanır.
+
+        guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        // Yeni bir UIWindow oluşturun ve windowScene ile başlatın
+        let window = UIWindow(windowScene: windowScene)
+        
+        // Kullanıcının giriş yapıp yapmadığını kontrol edin
         if UserDefaults.standard.value(forKey: "accesToken") != nil {
-            guard let windowScene = (scene as? UIWindowScene) else { return }
-            let window = UIWindow(windowScene: windowScene)
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "NotesScreenViewController")
+            // Giriş yapılmışsa, NotesScreenViewController'ı başlangıç ekranı olarak ayarlayın
+            let initialViewController = NotesScreenViewController()
             let navigationController = UINavigationController(rootViewController: initialViewController)
-            
             window.rootViewController = navigationController
-            self.window = window
-            window.makeKeyAndVisible()
-
         } else {
-            guard let _ = (scene as? UIWindowScene) else { return }
+            // Giriş yapılmamışsa, RegisterViewController'ı başlangıç ekranı olarak ayarlayın
+            let initialViewController = LoginViewController()
+            let navigationController = UINavigationController(rootViewController: initialViewController)
+            window.rootViewController = navigationController
         }
         
+        // UIWindow'u görünür yapın
+        self.window = window
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class PasswordChangeScreenViewController: UIViewController {
     
@@ -16,12 +17,11 @@ class PasswordChangeScreenViewController: UIViewController {
     private var ErrorImage = UIImageView()
     private var ErrorMessage = UILabel()
     
-    let userService = UserService()
     let viewModel = PasswordChangeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialDesign()
+        setBackButtonTitle(title: "Change Password",isHideNavBar: false)
         configure()
         initialSettings()
         setupBindings()
@@ -34,6 +34,8 @@ class PasswordChangeScreenViewController: UIViewController {
     }
     
     private func configure() {
+        view.backgroundColor = .systemBackground
+        
         view.addSubview(Password)
         view.addSubview(NewPassword)
         view.addSubview(ReNewPassword)
@@ -52,21 +54,14 @@ class PasswordChangeScreenViewController: UIViewController {
         leftBarButton.image = UIImage.navBarItemIcon
         self.navigationItem.leftBarButtonItem = leftBarButton
         
+        ChangePasswordButton.addTarget(self, action: #selector(changePassword), for: .touchUpInside)
     }
     
-    
-    private func initialDesign() {
-        Password.initialDesign()
-        NewPassword.initialDesign()
-        ReNewPassword.initialDesign()
-        
-        ErrorImage.isHidden = true
-        ErrorMessage.isHidden = true
-        SaveButton.isEnabled = false
-        
-    }
     
     private func setupBindings() {
+        
+        viewModel.validateInputs()
+        
         viewModel.onSuccesPasswordChange = { [weak self] message in
             self?.showToast(message: message, isSuccess: true)
         }
@@ -78,15 +73,18 @@ class PasswordChangeScreenViewController: UIViewController {
         }
         
         viewModel.isSaveButtonEnabled = { [weak self] isEnabled in
-            self?.SaveButton.isEnabled = isEnabled
-            isEnabled ? self?.SaveButton.enableDesign() : self?.SaveButton.disabledDesign()
+            self?.ChangePasswordButton.isEnabled = isEnabled
+            self?.ChangePasswordButton.initialDesign()
         }
     }
 }
 // Actions
 extension PasswordChangeScreenViewController {
-    @IBAction private func changePassword(_ sender: Any) {
-        initialDesign()
+    @objc private func changePassword(_ sender: Any) {
+        
+        ErrorImage.isHidden = true
+        ErrorMessage.isHidden = true
+
         viewModel.changePassword()
     }
     
@@ -167,6 +165,7 @@ extension PasswordChangeScreenViewController {
     
     private func makeErrorLabel () {
         ErrorMessage.text = "Error"
+        ErrorMessage.isHidden = true
         ErrorMessage.textColor = UIColor.error
         
         ErrorMessage.font = .systemFont(ofSize: 12)
@@ -179,6 +178,7 @@ extension PasswordChangeScreenViewController {
 
     private func makeErrorImage () {
         ErrorImage.image = .erroricon
+        ErrorImage.isHidden = true
         ErrorImage.frame.size.width = 32
         
         ErrorImage.snp.makeConstraints { make in
@@ -191,7 +191,7 @@ extension PasswordChangeScreenViewController {
     
     private func makeChangePasswordButton() {
         
-        var component = ChangePasswordButton
+        let component = ChangePasswordButton
         
         component.setTitle("Change Button", for: .normal)
         component.isEnabled = false

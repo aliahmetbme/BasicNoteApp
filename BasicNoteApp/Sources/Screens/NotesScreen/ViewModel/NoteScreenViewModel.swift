@@ -28,7 +28,7 @@ class NoteScreenViewModel: INoteScreenViewModel {
             case.success(let response):
                 self.noteTakenSucces?(response.data.data)
             case .failure(let error):
-                self.noteTakenFailure?(error.localizedDescription)
+                self.noteTakenFailure?(error.message)
             }
         }
     }
@@ -37,10 +37,10 @@ class NoteScreenViewModel: INoteScreenViewModel {
         noteService.deleteNote(note_id:id) { results in
             switch results {
             case .success(let response):
-                print(response.message)
+                self.noteDeleteSucces?(response.message)
                 self.getAllNotes()
             case .failure(let error):
-                print(error)
+                self.noteDeleteFailure?(error.message)
             }
         }
     }

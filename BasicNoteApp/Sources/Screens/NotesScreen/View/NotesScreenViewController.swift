@@ -28,6 +28,7 @@ class NotesScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initialSettings()
+        viewModel.getAllNotes()
     }
     
     
@@ -35,7 +36,7 @@ class NotesScreenViewController: UIViewController {
 
         viewModel.noteTakenSucces =  { data in
             self.notesArray = data
-            self.notesTable.reloadData()
+            self.NotesTable.reloadData()
         }
         
         viewModel.noteTakenFailure =  { message in
@@ -79,6 +80,7 @@ class NotesScreenViewController: UIViewController {
     }
     
     private func configure() {
+        view.backgroundColor = .systemBackground
         view.addSubview(NotesTable)
         view.addSubview(AddNoteButton)
         
@@ -194,7 +196,7 @@ extension NotesScreenViewController {
     private func makeNotesTable() {
         NotesTable.snp.makeConstraints { make in
             make.top.right.left.equalToSuperview()
-            make.bottom.equalTo(AddNoteButton.snp.top).offset(5)
+            make.bottom.equalTo(AddNoteButton.snp.top).inset(20)
         }
     }
     

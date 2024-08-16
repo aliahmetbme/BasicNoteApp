@@ -21,24 +21,24 @@ class AddNoteViewModel: IAddNoteViewModel {
     var onFailure:((String) -> Void)?
     var isAddButtonEnabled:((Bool) -> Void)?
     
-    var note:String = ""
-    var title:String = ""
+    var note:String?
+    var title:String?
     
     func addNewNote() {
-        let newNote = UploadNoteModel(title: title, note: note)
+        let newNote = UploadNoteModel(title: title!, note: note!)
         
         noteService.createNote(note: newNote) { result in
             switch result {
             case .success(let response):
                 self.onSucces?(response.message)
             case .failure(let error):
-                self.onFailure?(error.localizedDescription)
+                self.onFailure?(error.message)
             }
         }
     }
     
     func isValidInput() {
-        let isValid = !note.isEmpty && !title.isEmpty
+        let isValid = !note!.isEmpty && !title!.isEmpty
         isAddButtonEnabled?(isValid)
     }
 }

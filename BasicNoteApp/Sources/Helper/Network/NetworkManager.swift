@@ -12,10 +12,10 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
 
-    func request<T: Decodable>(_ endpoint: APIEndpoint, method: HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    func request<T: Decodable>(_ endpoint: APIEndpoint, method: HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, completion: @escaping (Result<T, ErrorResponse>) -> Void) {
         
         guard let url = URL(string: endpoint.urlString) else {
-            completion(.failure(NetworkError(code: "url", message: "Invalid URL")))
+            completion(.failure(ErrorResponse(code: "url", message: "Invalid URL")))
             return
         }
         
@@ -39,22 +39,16 @@ class NetworkManager {
                 if let data = response.data {
                     do {
                         let decoder = JSONDecoder()
-                        let errorResponse = try decoder.decode(NetworkError.self, from: data)
+                        let errorResponse = try decoder.decode(ErrorResponse.self, from: data)
                         completion(.failure(errorResponse))
                     } catch {
                         print("Error decoding error response: \(error)")
-                        completion(.failure(NetworkError(code: "decoding_error", message: "Failed to decode error response")))
+                        completion(.failure(ErrorResponse(code: "decoding_error", message: "Failed to decode error response")))
                     }
                 } else {
-                    completion(.failure(NetworkError(code: "request_failed", message: error.localizedDescription)))
+                    completion(.failure(ErrorResponse(code: "request_failed", message: "There is not internet connection please check your connection")))
                 }
             }
         }
     }
 }
-
-struct NetworkError: Codable, Error {
-    let code: String
-    let message: String
-}
-

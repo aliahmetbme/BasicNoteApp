@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class AuthService {
-    func login(user: UserLogin, completion: @escaping (Result<SuccesfulLoginResponse, NetworkError>) -> Void) {
+    func login(user: UserLogin, completion: @escaping (Result<SuccesfulLoginResponse, ErrorResponse>) -> Void) {
         let parameters: Parameters = [
             "email": user.email,
             "password": user.password
@@ -18,7 +18,7 @@ class AuthService {
         NetworkManager.shared.request(.login, method: .post, parameters: parameters, completion: completion)
     }
     
-    func register(user: UserRegister, completion: @escaping (Result<SuccesfullyRegisterResponse, NetworkError>) -> Void) {
+    func register(user: UserRegister, completion: @escaping (Result<SuccesfullyRegisterResponse, ErrorResponse>) -> Void) {
         let parameters: Parameters = [
             "email": user.email,
             "full_name": user.fullName,
@@ -28,7 +28,7 @@ class AuthService {
         NetworkManager.shared.request(.register, method: .post, parameters: parameters, completion: completion)
     }
     
-    func forgotPassword(email: String, completion: @escaping (Result<SuccesfullyFogetPasswordResponse, NetworkError>) -> Void) {
+    func forgotPassword(email: String, completion: @escaping (Result<SuccesfullyFogetPasswordResponse, ErrorResponse>) -> Void) {
         
         let parameter: Parameters = ["email": email]
         

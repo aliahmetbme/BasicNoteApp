@@ -22,12 +22,12 @@ class EditNoteViewModel: IEditNoteViewModel {
     var onSavigNoteSucces: ((String) -> Void)?
     var onSavingNoteFailure: ((String) -> Void)?
     
-    var id: Int = 0
-    var noteDetail: String = ""
-    var title: String = ""
+    var id: Int?
+    var noteDetail: String?
+    var title: String?
     
     func updateNote() {
-        let note = Note(id: id, title: title, note: noteDetail)
+        let note = Note(id: id!, title: title!, note: noteDetail!)
         
         noteService.updateNote(note: note) {
             result in
@@ -35,7 +35,7 @@ class EditNoteViewModel: IEditNoteViewModel {
             case .success(let response):
                 self.onSavigNoteSucces?(response.message)
             case .failure(let error):
-                self.onSavingNoteFailure?(error.localizedDescription)
+                self.onSavingNoteFailure?(error.message)
             }
         }
     }
@@ -49,7 +49,7 @@ class EditNoteViewModel: IEditNoteViewModel {
                 self.onTakingNoteSucces?(note)
             case .failure(let error):
                 print(error)
-                self.onTakingNoteFailure?(error.localizedDescription)
+                self.onTakingNoteFailure?(error.message)
             }
         }
     }

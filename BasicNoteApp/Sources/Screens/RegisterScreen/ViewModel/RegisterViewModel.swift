@@ -32,7 +32,7 @@ class RegisterViewModel: IRegisterViewModel {
             case .success(_):
                 self.onSuccess!()
             case .failure(let error):
-                self.onError!(error.localizedDescription)
+                self.onError!(error.message)
             }
         }
     }
