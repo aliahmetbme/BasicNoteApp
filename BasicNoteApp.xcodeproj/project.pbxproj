@@ -1,0 +1,840 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4F54960F8D5067EB704A2FD /* Pods_BasicNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3799336ED2C5BE62AC5AF0DB /* Pods_BasicNoteApp.framework */; };
+		FE1566BE2C64DF720024C4D5 /* NoteScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1566BD2C64DF720024C4D5 /* NoteScreenViewModel.swift */; };
+		FE1566C32C6515700024C4D5 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1566C22C6515700024C4D5 /* ForgetPasswordViewModel.swift */; };
+		FE239DD42C6406A4006D91DF /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE239DD32C6406A3006D91DF /* RegisterViewModel.swift */; };
+		FE239DD82C641C50006D91DF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE239DD72C641C50006D91DF /* LoginViewModel.swift */; };
+		FE239DDA2C642DDE006D91DF /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE239DD92C642DDE006D91DF /* AddNoteViewModel.swift */; };
+		FE239DDC2C64355D006D91DF /* EditNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE239DDB2C64355D006D91DF /* EditNoteViewModel.swift */; };
+		FE24B3452C4E90820024C9F7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24B3442C4E90820024C9F7 /* UserService.swift */; };
+		FE24B3472C4EBDAD0024C9F7 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24B3462C4EBDAD0024C9F7 /* ErrorResponse.swift */; };
+		FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */; };
+		FE45CB7A2C65413E007B23C1 /* PasswordChangeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45CB792C65413E007B23C1 /* PasswordChangeScreenViewModel.swift */; };
+		FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */; };
+		FE725EEB2C4AE9F800FA2032 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */; };
+		FE725EED2C4AEA2D00FA2032 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725EEC2C4AEA2D00FA2032 /* UserResponse.swift */; };
+		FE725EEF2C4AEE7500FA2032 /* NoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE725EEE2C4AEE7500FA2032 /* NoteResponse.swift */; };
+		FE7548992C4B2CFF00362778 /* NotesScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7548982C4B2CFF00362778 /* NotesScreenViewController.swift */; };
+		FE8FF9B02C3DDB8600A19C03 /* Extensions+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8FF9AF2C3DDB8600A19C03 /* Extensions+UITextField.swift */; };
+		FE8FF9B22C3DDBBE00A19C03 /* Extensions+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8FF9B12C3DDBBE00A19C03 /* Extensions+UIButton.swift */; };
+		FE9652042C4C2C03006B9E50 /* NoteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9652032C4C2C03006B9E50 /* NoteViewCell.swift */; };
+		FE9652072C4C6713006B9E50 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9652062C4C6713006B9E50 /* EditNoteViewController.swift */; };
+		FE96520A2C4C904E006B9E50 /* AddNoteScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9652092C4C904E006B9E50 /* AddNoteScreenViewController.swift */; };
+		FE96520C2C4C9184006B9E50 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE96520B2C4C9184006B9E50 /* NoteModel.swift */; };
+		FEA20F6C2C4E8DB100D401FE /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA20F6B2C4E8DB100D401FE /* ProfileScreenViewController.swift */; };
+		FEA20F6E2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA20F6D2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift */; };
+		FEC3C1B22C62E9C200116585 /* ProfileScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC3C1B12C62E9C200116585 /* ProfileScreenViewModel.swift */; };
+		FED5E9E32C49864B00F72C95 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E22C49864B00F72C95 /* Config.swift */; };
+		FED5E9E52C49866A00F72C95 /* ConfigExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E42C49866A00F72C95 /* ConfigExample.swift */; };
+		FED5E9E72C49867600F72C95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9E62C49867600F72C95 /* User.swift */; };
+		FED5E9EB2C49E02900F72C95 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9EA2C49E02900F72C95 /* Extension+UIViewController.swift */; };
+		FED5E9EE2C49EB7E00F72C95 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9ED2C49EB7E00F72C95 /* NetworkManager.swift */; };
+		FED5E9F02C49EC1200F72C95 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9EF2C49EC1200F72C95 /* APIEndpoints.swift */; };
+		FED5E9F42C49ECB000F72C95 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9F32C49ECB000F72C95 /* AuthService.swift */; };
+		FED5E9F62C49ECC000F72C95 /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED5E9F52C49ECC000F72C95 /* NoteService.swift */; };
+		FEE75E0A2C32AC0400F39397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E092C32AC0400F39397 /* AppDelegate.swift */; };
+		FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */; };
+		FEE75E0E2C32AC0400F39397 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE75E0D2C32AC0400F39397 /* RegisterViewController.swift */; };
+		FEE75E132C32AC0500F39397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE75E122C32AC0500F39397 /* Assets.xcassets */; };
+		FEE75E162C32AC0500F39397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE75E142C32AC0500F39397 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3799336ED2C5BE62AC5AF0DB /* Pods_BasicNoteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicNoteApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8044875D1927527B4155225D /* Pods-BasicNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicNoteApp.release.xcconfig"; path = "Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp.release.xcconfig"; sourceTree = "<group>"; };
+		F0B478FB940B4BB00B7F1FA2 /* Pods-BasicNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicNoteApp.debug.xcconfig"; path = "Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FE1566BD2C64DF720024C4D5 /* NoteScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteScreenViewModel.swift; sourceTree = "<group>"; };
+		FE1566C22C6515700024C4D5 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
+		FE239DD32C6406A3006D91DF /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		FE239DD72C641C50006D91DF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FE239DD92C642DDE006D91DF /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
+		FE239DDB2C64355D006D91DF /* EditNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewModel.swift; sourceTree = "<group>"; };
+		FE24B3442C4E90820024C9F7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		FE24B3462C4EBDAD0024C9F7 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FE45CB792C65413E007B23C1 /* PasswordChangeScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordChangeScreenViewModel.swift; sourceTree = "<group>"; };
+		FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		FE725EEC2C4AEA2D00FA2032 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		FE725EEE2C4AEE7500FA2032 /* NoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteResponse.swift; sourceTree = "<group>"; };
+		FE7548982C4B2CFF00362778 /* NotesScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesScreenViewController.swift; sourceTree = "<group>"; };
+		FE8FF9AF2C3DDB8600A19C03 /* Extensions+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITextField.swift"; sourceTree = "<group>"; };
+		FE8FF9B12C3DDBBE00A19C03 /* Extensions+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIButton.swift"; sourceTree = "<group>"; };
+		FE9652032C4C2C03006B9E50 /* NoteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewCell.swift; sourceTree = "<group>"; };
+		FE9652062C4C6713006B9E50 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
+		FE9652092C4C904E006B9E50 /* AddNoteScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteScreenViewController.swift; sourceTree = "<group>"; };
+		FE96520B2C4C9184006B9E50 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		FEA20F6B2C4E8DB100D401FE /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
+		FEA20F6D2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeScreenViewController.swift; sourceTree = "<group>"; };
+		FEC3C1B12C62E9C200116585 /* ProfileScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewModel.swift; sourceTree = "<group>"; };
+		FED5E9E22C49864B00F72C95 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		FED5E9E42C49866A00F72C95 /* ConfigExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigExample.swift; sourceTree = "<group>"; };
+		FED5E9E62C49867600F72C95 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FED5E9EA2C49E02900F72C95 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		FED5E9ED2C49EB7E00F72C95 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FED5E9EF2C49EC1200F72C95 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		FED5E9F32C49ECB000F72C95 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FED5E9F52C49ECC000F72C95 /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
+		FEE75E062C32AC0400F39397 /* BasicNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE75E092C32AC0400F39397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FEE75E0D2C32AC0400F39397 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FEE75E122C32AC0500F39397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEE75E152C32AC0500F39397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FEE75E172C32AC0500F39397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEE75E032C32AC0400F39397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F54960F8D5067EB704A2FD /* Pods_BasicNoteApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5997733634555217009898E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0B478FB940B4BB00B7F1FA2 /* Pods-BasicNoteApp.debug.xcconfig */,
+				8044875D1927527B4155225D /* Pods-BasicNoteApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EDFA2568CF4F7F8C90C9829F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3799336ED2C5BE62AC5AF0DB /* Pods_BasicNoteApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE1566BF2C6515500024C4D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE4958B02C35B65400E98BB4 /* ForgotPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE1566C02C6515570024C4D5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE1566C22C6515700024C4D5 /* ForgetPasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE239DD12C640684006D91DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEE75E0D2C32AC0400F39397 /* RegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE239DD22C64068B006D91DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE239DD32C6406A3006D91DF /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE239DD52C641C30006D91DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE2BEF8D2C3466D800DAF37A /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE239DD62C641C38006D91DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE239DD72C641C50006D91DF /* LoginViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE239DDD2C643EE4006D91DF /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FE9652032C4C2C03006B9E50 /* NoteViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		FE2BEF802C345B6300DAF37A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE725EE92C4A896C00FA2032 /* ResponceModels */,
+				FE760B232C36C5C20055E53F /* Notes */,
+				FE2BEF882C3465FB00DAF37A /* Auth */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE2BEF882C3465FB00DAF37A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FED5E9E62C49867600F72C95 /* User.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FE725EE82C4A86DB00FA2032 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FED5E9EC2C49EB2000F72C95 /* Network */,
+				FED5E9F12C49EC9200F72C95 /* Services */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FE725EE92C4A896C00FA2032 /* ResponceModels */ = {
+			isa = PBXGroup;
+			children = (
+				FE725EEA2C4AE9F800FA2032 /* AuthResponse.swift */,
+				FE725EEC2C4AEA2D00FA2032 /* UserResponse.swift */,
+				FE725EEE2C4AEE7500FA2032 /* NoteResponse.swift */,
+				FE24B3462C4EBDAD0024C9F7 /* ErrorResponse.swift */,
+			);
+			path = ResponceModels;
+			sourceTree = "<group>";
+		};
+		FE7548972C4B2CD900362778 /* NotesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FEC3C1AE2C62E97000116585 /* ViewModel */,
+				FEC3C1AD2C62E96A00116585 /* View */,
+			);
+			path = NotesScreen;
+			sourceTree = "<group>";
+		};
+		FE760B1C2C3697660055E53F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FE725EE82C4A86DB00FA2032 /* Helper */,
+				FE760B222C3699DC0055E53F /* Extensions */,
+				FE760B1E2C3697880055E53F /* Screens */,
+				FE2BEF802C345B6300DAF37A /* Models */,
+				FE760B1D2C3697770055E53F /* Resources */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FE760B1D2C3697770055E53F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEE75E0B2C32AC0400F39397 /* SceneDelegate.swift */,
+				FEE75E092C32AC0400F39397 /* AppDelegate.swift */,
+				FEE75E142C32AC0500F39397 /* LaunchScreen.storyboard */,
+				FEE75E122C32AC0500F39397 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE760B1E2C3697880055E53F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FEA20F6F2C4E8E2000D401FE /* ChangePasswordScreen */,
+				FEA20F6A2C4E8D9900D401FE /* ProfileScreen */,
+				FE9652082C4C902E006B9E50 /* AddNoteScreen */,
+				FE9652052C4C66D7006B9E50 /* EditNoteScreen */,
+				FE7548972C4B2CD900362778 /* NotesScreen */,
+				FE760B212C3698AC0055E53F /* ForgotPasswordScreen */,
+				FE760B202C3698950055E53F /* LoginScreen */,
+				FE760B1F2C3698880055E53F /* RegisterScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FE760B1F2C3698880055E53F /* RegisterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE239DD22C64068B006D91DF /* ViewModel */,
+				FE239DD12C640684006D91DF /* View */,
+			);
+			path = RegisterScreen;
+			sourceTree = "<group>";
+		};
+		FE760B202C3698950055E53F /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE239DD62C641C38006D91DF /* ViewModel */,
+				FE239DD52C641C30006D91DF /* View */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		FE760B212C3698AC0055E53F /* ForgotPasswordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE1566C02C6515570024C4D5 /* ViewModel */,
+				FE1566BF2C6515500024C4D5 /* View */,
+			);
+			path = ForgotPasswordScreen;
+			sourceTree = "<group>";
+		};
+		FE760B222C3699DC0055E53F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE8FF9AF2C3DDB8600A19C03 /* Extensions+UITextField.swift */,
+				FE8FF9B12C3DDBBE00A19C03 /* Extensions+UIButton.swift */,
+				FED5E9EA2C49E02900F72C95 /* Extension+UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE760B232C36C5C20055E53F /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				FE96520B2C4C9184006B9E50 /* NoteModel.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		FE9652052C4C66D7006B9E50 /* EditNoteScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FEC3C1AC2C62E96100116585 /* View */,
+				FEC3C1AB2C62E95800116585 /* ViewModel */,
+			);
+			path = EditNoteScreen;
+			sourceTree = "<group>";
+		};
+		FE9652082C4C902E006B9E50 /* AddNoteScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FEC3C1AA2C62E94700116585 /* ViewModel */,
+				FEC3C1A92C62E91B00116585 /* View */,
+			);
+			path = AddNoteScreen;
+			sourceTree = "<group>";
+		};
+		FEA20F6A2C4E8D9900D401FE /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FEC3C1A82C62E90E00116585 /* ViewModel */,
+				FEC3C1A72C62E90700116585 /* View */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		FEA20F6F2C4E8E2000D401FE /* ChangePasswordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FEC3C1A62C62E8B400116585 /* ViewModel */,
+				FEC3C1A52C62E87500116585 /* View */,
+			);
+			path = ChangePasswordScreen;
+			sourceTree = "<group>";
+		};
+		FEC3C1A52C62E87500116585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEA20F6D2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEC3C1A62C62E8B400116585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE45CB792C65413E007B23C1 /* PasswordChangeScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEC3C1A72C62E90700116585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEA20F6B2C4E8DB100D401FE /* ProfileScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEC3C1A82C62E90E00116585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FEC3C1B12C62E9C200116585 /* ProfileScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEC3C1A92C62E91B00116585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE9652092C4C904E006B9E50 /* AddNoteScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEC3C1AA2C62E94700116585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE239DD92C642DDE006D91DF /* AddNoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEC3C1AB2C62E95800116585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE239DDB2C64355D006D91DF /* EditNoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FEC3C1AC2C62E96100116585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE9652062C4C6713006B9E50 /* EditNoteViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEC3C1AD2C62E96A00116585 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE7548982C4B2CFF00362778 /* NotesScreenViewController.swift */,
+				FE239DDD2C643EE4006D91DF /* ViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FEC3C1AE2C62E97000116585 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE1566BD2C64DF720024C4D5 /* NoteScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FED5E9EC2C49EB2000F72C95 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FED5E9E42C49866A00F72C95 /* ConfigExample.swift */,
+				FED5E9E22C49864B00F72C95 /* Config.swift */,
+				FED5E9ED2C49EB7E00F72C95 /* NetworkManager.swift */,
+				FED5E9EF2C49EC1200F72C95 /* APIEndpoints.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FED5E9F12C49EC9200F72C95 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FED5E9F32C49ECB000F72C95 /* AuthService.swift */,
+				FED5E9F52C49ECC000F72C95 /* NoteService.swift */,
+				FE24B3442C4E90820024C9F7 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FEE75DFD2C32AC0400F39397 = {
+			isa = PBXGroup;
+			children = (
+				FEE75E082C32AC0400F39397 /* BasicNoteApp */,
+				FEE75E072C32AC0400F39397 /* Products */,
+				5997733634555217009898E6 /* Pods */,
+				EDFA2568CF4F7F8C90C9829F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FEE75E072C32AC0400F39397 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEE75E062C32AC0400F39397 /* BasicNoteApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEE75E082C32AC0400F39397 /* BasicNoteApp */ = {
+			isa = PBXGroup;
+			children = (
+				FEE75E172C32AC0500F39397 /* Info.plist */,
+				FE760B1C2C3697660055E53F /* Sources */,
+			);
+			path = BasicNoteApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEE75E052C32AC0400F39397 /* BasicNoteApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEE75E1A2C32AC0500F39397 /* Build configuration list for PBXNativeTarget "BasicNoteApp" */;
+			buildPhases = (
+				09FB8541253E302A6B8549FE /* [CP] Check Pods Manifest.lock */,
+				FEE75E022C32AC0400F39397 /* Sources */,
+				FEE75E032C32AC0400F39397 /* Frameworks */,
+				FEE75E042C32AC0400F39397 /* Resources */,
+				DA0A826A51CDA8969AFB6AAF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasicNoteApp;
+			productName = BasicNoteApp;
+			productReference = FEE75E062C32AC0400F39397 /* BasicNoteApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEE75DFE2C32AC0400F39397 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					FEE75E052C32AC0400F39397 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = FEE75E012C32AC0400F39397 /* Build configuration list for PBXProject "BasicNoteApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FEE75DFD2C32AC0400F39397;
+			productRefGroup = FEE75E072C32AC0400F39397 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEE75E052C32AC0400F39397 /* BasicNoteApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEE75E042C32AC0400F39397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE75E162C32AC0500F39397 /* LaunchScreen.storyboard in Resources */,
+				FEE75E132C32AC0500F39397 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09FB8541253E302A6B8549FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasicNoteApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA0A826A51CDA8969AFB6AAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicNoteApp/Pods-BasicNoteApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEE75E022C32AC0400F39397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE725EEF2C4AEE7500FA2032 /* NoteResponse.swift in Sources */,
+				FED5E9EE2C49EB7E00F72C95 /* NetworkManager.swift in Sources */,
+				FE96520A2C4C904E006B9E50 /* AddNoteScreenViewController.swift in Sources */,
+				FE9652042C4C2C03006B9E50 /* NoteViewCell.swift in Sources */,
+				FE4958B12C35B65400E98BB4 /* ForgotPasswordViewController.swift in Sources */,
+				FE96520C2C4C9184006B9E50 /* NoteModel.swift in Sources */,
+				FE24B3452C4E90820024C9F7 /* UserService.swift in Sources */,
+				FE45CB7A2C65413E007B23C1 /* PasswordChangeScreenViewModel.swift in Sources */,
+				FE2BEF8E2C3466D800DAF37A /* LoginViewController.swift in Sources */,
+				FEE75E0E2C32AC0400F39397 /* RegisterViewController.swift in Sources */,
+				FE8FF9B02C3DDB8600A19C03 /* Extensions+UITextField.swift in Sources */,
+				FED5E9E52C49866A00F72C95 /* ConfigExample.swift in Sources */,
+				FE8FF9B22C3DDBBE00A19C03 /* Extensions+UIButton.swift in Sources */,
+				FE725EED2C4AEA2D00FA2032 /* UserResponse.swift in Sources */,
+				FE9652072C4C6713006B9E50 /* EditNoteViewController.swift in Sources */,
+				FE1566BE2C64DF720024C4D5 /* NoteScreenViewModel.swift in Sources */,
+				FE7548992C4B2CFF00362778 /* NotesScreenViewController.swift in Sources */,
+				FE239DDC2C64355D006D91DF /* EditNoteViewModel.swift in Sources */,
+				FED5E9E32C49864B00F72C95 /* Config.swift in Sources */,
+				FED5E9F62C49ECC000F72C95 /* NoteService.swift in Sources */,
+				FE239DD82C641C50006D91DF /* LoginViewModel.swift in Sources */,
+				FED5E9F02C49EC1200F72C95 /* APIEndpoints.swift in Sources */,
+				FEE75E0A2C32AC0400F39397 /* AppDelegate.swift in Sources */,
+				FED5E9EB2C49E02900F72C95 /* Extension+UIViewController.swift in Sources */,
+				FED5E9E72C49867600F72C95 /* User.swift in Sources */,
+				FE1566C32C6515700024C4D5 /* ForgetPasswordViewModel.swift in Sources */,
+				FE239DD42C6406A4006D91DF /* RegisterViewModel.swift in Sources */,
+				FEA20F6E2C4E8E1500D401FE /* PasswordChangeScreenViewController.swift in Sources */,
+				FEA20F6C2C4E8DB100D401FE /* ProfileScreenViewController.swift in Sources */,
+				FEE75E0C2C32AC0400F39397 /* SceneDelegate.swift in Sources */,
+				FE24B3472C4EBDAD0024C9F7 /* ErrorResponse.swift in Sources */,
+				FE725EEB2C4AE9F800FA2032 /* AuthResponse.swift in Sources */,
+				FE239DDA2C642DDE006D91DF /* AddNoteViewModel.swift in Sources */,
+				FED5E9F42C49ECB000F72C95 /* AuthService.swift in Sources */,
+				FEC3C1B22C62E9C200116585 /* ProfileScreenViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FEE75E142C32AC0500F39397 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEE75E152C32AC0500F39397 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FEE75E182C32AC0500F39397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FEE75E192C32AC0500F39397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEE75E1B2C32AC0500F39397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0B478FB940B4BB00B7F1FA2 /* Pods-BasicNoteApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RZG5C6GQ54;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BasicNoteApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.BasicNoteApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FEE75E1C2C32AC0500F39397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8044875D1927527B4155225D /* Pods-BasicNoteApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RZG5C6GQ54;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BasicNoteApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.BasicNoteApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEE75E012C32AC0400F39397 /* Build configuration list for PBXProject "BasicNoteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE75E182C32AC0500F39397 /* Debug */,
+				FEE75E192C32AC0500F39397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEE75E1A2C32AC0500F39397 /* Build configuration list for PBXNativeTarget "BasicNoteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE75E1B2C32AC0500F39397 /* Debug */,
+				FEE75E1C2C32AC0500F39397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEE75DFE2C32AC0400F39397 /* Project object */;
+}
