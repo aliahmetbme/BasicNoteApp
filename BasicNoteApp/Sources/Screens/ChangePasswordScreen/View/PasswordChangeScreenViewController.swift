@@ -128,7 +128,7 @@ extension PasswordChangeScreenViewController {
     
     private func makePassWordField () {
         let component = Password
-        
+        component.isSecureTextEntry = true
         component.placeholder = "Password"
         component.initialDesign()
         component.snp.makeConstraints { make in
@@ -140,7 +140,7 @@ extension PasswordChangeScreenViewController {
 
     private func makeNewPassWordField () {
         let component = NewPassword
-        
+        component.isSecureTextEntry = true
         component.placeholder = "New Password"
         component.initialDesign()
         component.snp.makeConstraints { make in
@@ -153,7 +153,7 @@ extension PasswordChangeScreenViewController {
     private func makeReNewPassWordField () {
         
         let component = ReNewPassword
-        
+        component.isSecureTextEntry = true
         component.placeholder = "New Password Configuration"
         component.initialDesign()
         component.snp.makeConstraints { make in
@@ -193,7 +193,7 @@ extension PasswordChangeScreenViewController {
         
         let component = ChangePasswordButton
         
-        component.setTitle("Change Button", for: .normal)
+        component.setTitle("Change", for: .normal)
         component.isEnabled = false
 
         component.initialDesign()
